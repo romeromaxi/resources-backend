@@ -1,1 +1,1 @@
-# squad6-2020-2C
+# PSA - Análisis de la Información
