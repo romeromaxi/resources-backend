@@ -98,7 +98,7 @@
                     <configuration>
                       <archive>
                         <manifest>
-                          <mainClass>fully.qualified.MainClass</mainClass>
+                          <mainClass>com.aninfo.MainApp</mainClass>
                         </manifest>
                       </archive>
                       <descriptorRefs>
