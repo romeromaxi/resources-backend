@@ -15,6 +15,11 @@ Feature: create update delete or hours to a project
     When add 0 hours to the resource id 19
     Then i get invalid number error
 
+  Scenario: create more than 24 hours to a resource
+    Given a resource id 22 who works the task 148
+    When add 25 hours to the resource id 22
+    Then i get invalid number error
+
   Scenario: assign a hours worked to a task
     Given a resource id 15 who works 2 hours in a task 350
     When i assign the hours to the task 350
