@@ -1,24 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.aninfo.recursos.RunCucumberTest
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 1.371 s <<< FAILURE! - in com.aninfo.recursos.RunCucumberTest
-a few cukes(Belly)  Time elapsed: 0.293 s  <<< ERROR!
-io.cucumber.junit.UndefinedStepException: 
-The step "I wait 1 hour" is undefined. You can implement it using the snippet(s) below:
-
-@When("I wait {int} hour")
-public void i_wait_hour(Integer int1) {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-
-
-Some other steps were also undefined:
-
-@Then("my belly should growl")
-public void my_belly_should_growl() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-
-
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.882 s - in com.aninfo.recursos.RunCucumberTest

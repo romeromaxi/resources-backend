@@ -1,2 +1,4 @@
-/home/lautaro/Escritorio/asdasd/recursos-backend/src/main/java/com/aninfo/recursos/Belly.java
-/home/lautaro/Escritorio/asdasd/recursos-backend/src/main/java/com/aninfo/recursos/DemoApplication.java
+/home/lautaro/Escritorio/resources-backend/recursos-backend/src/main/java/com/aninfo/recursos/repository/ResourceRepository.java
+/home/lautaro/Escritorio/resources-backend/recursos-backend/src/main/java/com/aninfo/recursos/service/ResourceService.java
+/home/lautaro/Escritorio/resources-backend/recursos-backend/src/main/java/com/aninfo/recursos/model/Resource.java
+/home/lautaro/Escritorio/resources-backend/recursos-backend/src/main/java/com/aninfo/recursos/DemoApplication.java

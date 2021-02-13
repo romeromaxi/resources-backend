@@ -1,1 +1,5 @@
-com/aninfo/recursos/Belly.class
+com/aninfo/recursos/repository/ResourceRepository.class
+com/aninfo/recursos/service/ResourceService.class
+com/aninfo/recursos/model/Resource$Recursos.class
+com/aninfo/recursos/model/Resource.class
+com/aninfo/recursos/repository/ResourceRepository$1.class
