@@ -5,9 +5,11 @@ import com.aninfo.hours.model.Hours;
 import com.aninfo.hours.repository.HoursRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.PathVariable;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Optional;
 
 @Service
 public class HoursService {
@@ -26,5 +28,13 @@ public class HoursService {
         Collection<Hours> hours = new ArrayList<>();
         hoursRepository.findAll().forEach(hours::add);
         return hours;
+    }
+
+    public void deleteById(Long idHours) {
+        hoursRepository.deleteById(idHours);
+    }
+
+    public Optional<Hours> findById(Long idHours) {
+        return hoursRepository.findById(idHours);
     }
 }

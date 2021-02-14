@@ -11,11 +11,13 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 
 import java.util.Collection;
 import java.util.Vector;
+import java.util.Optional;
 
 @RestController
 @SpringBootApplication
@@ -43,5 +45,16 @@ public class MainApp extends SpringBootServletInitializer {
     @GetMapping("/hours")
     public Collection<Hours> getHours(){
         return hoursService.getHours();
+    }
+
+    @GetMapping("/hours/{id}")
+    public ResponseEntity<Hours> getHours(@PathVariable long id){
+        Optional<Hours> hoursOptional = hoursService.findById(id);
+        return ResponseEntity.of(hoursOptional);
+    }
+
+    @DeleteMapping("/hours/{id}")
+    public void deleteHours(@PathVariable Long id) {
+        hoursService.deleteById(id);
     }
 }
