@@ -57,4 +57,29 @@ public class MainApp extends SpringBootServletInitializer {
     public void deleteHours(@PathVariable Long id) {
         hoursService.deleteById(id);
     }
+
+    @PutMapping("hours/{id}")
+    public ResponseEntity<Hours> updateHours(@RequestBody Hours hours, @PathVariable Long id){
+        Optional<Hours> hoursOptional = hoursService.findById(id);
+
+        if (!hoursOptional.isPresent()) {
+            return ResponseEntity.notFound().build();
+        }
+
+        hours.setId(id);
+        hoursService.saveHours(hours);
+        return ResponseEntity.noContent().build();
+    }
+
+
+    @PutMapping("/hours/{id}/changeHours")
+    public Hours changeHours(@PathVariable Long id, @RequestParam Integer hoursToChange) {
+        return hoursService.changeHours(id, hoursToChange);
+    }
+
+    @PutMapping("/hours/{id}/changeDate")
+    public Hours changeDate(@PathVariable Long id, @RequestParam Integer newDate){
+        return hoursService.changeDate(id, newDate);
+    }
+
 }

@@ -42,4 +42,16 @@ public class Hours {
     }
 
     public Integer getDate(){ return this.date; }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public void setQuantityHours(Integer hoursToChange) {
+        this.quantityHours = hoursToChange;
+    }
+
+    public void setDate(Integer newDate) {
+        this.date = newDate;
+    }
 }

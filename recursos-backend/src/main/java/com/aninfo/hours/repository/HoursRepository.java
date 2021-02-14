@@ -7,4 +7,7 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface HoursRepository extends CrudRepository<Hours, Long> {
+
+    Hours findHoursById(Long id);
+
 }
