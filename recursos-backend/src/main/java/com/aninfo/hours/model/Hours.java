@@ -13,14 +13,16 @@ public class Hours {
     private Integer file;
     private Integer idTask;
     private Integer quantityHours;
+    private Integer date;
 
     public Hours() {
     }
 
-    public Hours(Integer file, Integer idTask, Integer quantityHours) {
+    public Hours(Integer file, Integer idTask, Integer quantityHours, Integer date) {
         this.file = file;
         this.idTask = idTask;
         this.quantityHours = quantityHours;
+        this.date = date;
     }
 
     public Long getId() {
@@ -38,4 +40,6 @@ public class Hours {
     public Integer getIdTask(){
         return this.idTask;
     }
+
+    public Integer getDate(){ return this.date; }
 }
