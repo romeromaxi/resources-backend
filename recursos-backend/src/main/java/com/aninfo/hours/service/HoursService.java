@@ -62,4 +62,13 @@ public class HoursService {
 
         return hours;
     }
+
+    public Hours changeTask(Long id, Integer newIdTask) {
+        Hours hours = hoursRepository.findHoursById(id);
+
+        hours.setTask(newIdTask);
+        hoursRepository.save(hours);
+
+        return hours;
+    }
 }

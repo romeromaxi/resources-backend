@@ -52,6 +52,51 @@ public class HoursStepDefinitions extends HoursIntegrationServiceTest {
     }
 
 
+    @When("i modify the date to {int}")
+    public void i_modify_the_date_to(Integer newDate) {
+        hours.setDate(newDate);
+    }
+
+    @Then("the date of the {int} hours assigned to resource id {int} to task {int} is {int}")
+    public void the_date_of_the_hours_assigned_to_resource_ir_to_task_is(Integer quantHours, Integer file, Integer idTask, Integer date) {
+        assertEquals(date, hours.getDate());
+    }
+
+
+    @Given("a resource id {int} with {int} hours on {int} assigned to task {int}")
+    public void a_resource_id_with_hours_on_assigned_to_task(Integer file, Integer quantHours, Integer date, Integer idTask) {
+        hours = createHours(file, quantHours, idTask, date);
+    }
+
+    @When("i modify the task to {int}")
+    public void i_modify_the_task_to(Integer newIdTask) {
+        hours.setTask(newIdTask);
+    }
+
+    @Then("the resource id {int} has {int} hours assigned to the new task {int}")
+    public void the_resource_id_has_hours_assigned_to_the_new_task(Integer file, Integer quantHours, Integer idTask) {
+        assertEquals(idTask, hours.getIdTask());
+    }
+
+    @Given("a resource id {int} with {int} hours worked from a task {int}")
+    public void a_resource_id_with_hours_worked_from_a_task(Integer int1, Integer int2, Integer int3) {
+        // Write code here that turns the phrase above into concrete actions
+        throw new io.cucumber.java.PendingException();
+    }
+
+    Some other steps were also undefined:
+
+    @When("i delete {int} hours from the task {int}")
+    public void i_delete_hours_from_the_task(Integer int1, Integer int2) {
+        // Write code here that turns the phrase above into concrete actions
+        throw new io.cucumber.java.PendingException();
+    }
+    @Then("the resource id {int} has {int} hours assigned to the task {int}")
+    public void the_resource_id_has_hours_assigned_to_the_task(Integer int1, Integer int2, Integer int3) {
+        // Write code here that turns the phrase above into concrete actions
+        throw new io.cucumber.java.PendingException();
+    }
+
 
 
 }

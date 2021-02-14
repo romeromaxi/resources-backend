@@ -82,4 +82,9 @@ public class MainApp extends SpringBootServletInitializer {
         return hoursService.changeDate(id, newDate);
     }
 
+    @PutMapping("/hours/{id}/changeIdTask")
+    public Hours changeTask(@PathVariable Long id, @RequestParam Integer newIdTask){
+        return hoursService.changeTask(id, newIdTask);
+    }
+
 }

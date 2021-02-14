@@ -54,4 +54,8 @@ public class Hours {
     public void setDate(Integer newDate) {
         this.date = newDate;
     }
+
+    public void setTask(Integer newIdTask) {
+        this.idTask = newIdTask;
+    }
 }
