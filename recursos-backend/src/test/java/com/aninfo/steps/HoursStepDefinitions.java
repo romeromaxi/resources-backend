@@ -16,8 +16,8 @@ public class HoursStepDefinitions extends HoursIntegrationServiceTest {
     private Hours hours;
 
     @Given("a resource id {int} who works {int} hours in the task {int}")
-    public void a_resource_id_who_works_hours_in_the_task(Integer file, Integer quantHours, Integer idTask) {
-        hours = createHours(file, quantHours, idTask);
+    public void a_resource_id_who_works_hours_in_the_task(Integer file, Integer quantHours, Integer idTask, Integer date) {
+        hours = createHours(file, quantHours, idTask, date);
     }
 
     @When("save the hours")
@@ -29,4 +29,6 @@ public class HoursStepDefinitions extends HoursIntegrationServiceTest {
     public void the_resource_id_has_hours_assigned_in_the_task(Integer file, Integer quantHours, Integer idTask) {
         assertEquals(quantHours, hours.getQuantityHours());
     }
+
+
 }

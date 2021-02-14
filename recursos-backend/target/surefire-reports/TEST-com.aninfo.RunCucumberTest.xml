@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.aninfo.RunCucumberTest" time="2.343" tests="10" errors="9" skipped="0" failures="0">
+  <properties>
+    <property name="sun.desktop" value="windows"/>
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
+    <property name="java.specification.version" value="11"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.class.path" value="C:\Users\Pato\Dev\Metodos\TPM2\resources-backend\recursos-backend\target\test-classes;C:\Users\Pato\Dev\Metodos\TPM2\resources-backend\recursos-backend\target\classes;C:\Users\Pato\.m2\repository\io\cucumber\cucumber-java\6.9.1\cucumber-java-6.9.1.jar;C:\Users\Pato\.m2\repository\io\cucumber\cucumber-core\6.9.1\cucumber-core-6.9.1.jar;C:\Users\Pato\.m2\repository\io\cucumber\cucumber-gherkin\6.9.1\cucumber-gherkin-6.9.1.jar;C:\Users\Pato\.m2\repository\io\cucumber\cucumber-gherkin-messages\6.9.1\cucumber-gherkin-messages-6.9.1.jar;C:\Users\Pato\.m2\repository\io\cucumber\messages\13.2.1\messages-13.2.1.jar;C:\Users\Pato\.m2\repository\io\cucumber\tag-expressions\3.0.0\tag-expressions-3.0.0.jar;C:\Users\Pato\.m2\repository\io\cucumber\cucumber-expressions\10.3.0\cucumber-expressions-10.3.0.jar;C:\Users\Pato\.m2\repository\io\cucumber\datatable\3.5.0\datatable-3.5.0.jar;C:\Users\Pato\.m2\repository\io\cucumber\cucumber-plugin\6.9.1\cucumber-plugin-6.9.1.jar;C:\Users\Pato\.m2\repository\io\cucumber\docstring\6.9.1\docstring-6.9.1.jar;C:\Users\Pato\.m2\repository\io\cucumber\html-formatter\9.0.0\html-formatter-9.0.0.jar;C:\Users\Pato\.m2\repository\io\cucumber\create-meta\2.0.4\create-meta-2.0.4.jar;C:\Users\Pato\.m2\repository\org\apiguardian\apiguardian-api\1.1.0\apiguardian-api-1.1.0.jar;C:\Users\Pato\.m2\repository\io\cucumber\cucumber-junit\6.9.1\cucumber-junit-6.9.1.jar;C:\Users\Pato\.m2\repository\junit\junit\4.13.1\junit-4.13.1.jar;C:\Users\Pato\.m2\repository\org\hamcrest\hamcrest-core\2.2\hamcrest-core-2.2.jar;C:\Users\Pato\.m2\repository\org\springframework\boot\spring-boot-starter-data-jpa\2.4.2\spring-boot-starter-data-jpa-2.4.2.jar;C:\Users\Pato\.m2\repository\org\springframework\boot\spring-boot-starter-aop\2.4.2\spring-boot-starter-aop-2.4.2.jar;C:\Users\Pato\.m2\repository\org\springframework\spring-aop\5.3.3\spring-aop-5.3.3.jar;C:\Users\Pato\.m2\repository\org\aspectj\aspectjweaver\1.9.6\aspectjweaver-1.9.6.jar;C:\Users\Pato\.m2\repository\org\springframework\boot\spring-boot-starter-jdbc\2.4.2\spring-boot-starter-jdbc-2.4.2.jar;C:\Users\Pato\.m2\repository\com\zaxxer\HikariCP\3.4.5\HikariCP-3.4.5.jar;C:\Users\Pato\.m2\repository\org\springframework\spring-jdbc\5.3.3\spring-jdbc-5.3.3.jar;C:\Users\Pato\.m2\repository\jakarta\transaction\jakarta.transaction-api\1.3.3\jakarta.transaction-api-1.3.3.jar;C:\Users\Pato\.m2\repository\jakarta\persistence\jakarta.persistence-api\2.2.3\jakarta.persistence-api-2.2.3.jar;C:\Users\Pato\.m2\repository\org\hibernate\hibernate-core\5.4.27.Final\hibernate-core-5.4.27.Final.jar;C:\Users\Pato\.m2\repository\org\jboss\logging\jboss-logging\3.4.1.Final\jboss-logging-3.4.1.Final.jar;C:\Users\Pato\.m2\repository\org\javassist\javassist\3.27.0-GA\javassist-3.27.0-GA.jar;C:\Users\Pato\.m2\repository\net\bytebuddy\byte-buddy\1.10.19\byte-buddy-1.10.19.jar;C:\Users\Pato\.m2\repository\antlr\antlr\2.7.7\antlr-2.7.7.jar;C:\Users\Pato\.m2\repository\org\jboss\jandex\2.1.3.Final\jandex-2.1.3.Final.jar;C:\Users\Pato\.m2\repository\com\fasterxml\classmate\1.5.1\classmate-1.5.1.jar;C:\Users\Pato\.m2\repository\org\dom4j\dom4j\2.1.3\dom4j-2.1.3.jar;C:\Users\Pato\.m2\repository\org\hibernate\common\hibernate-commons-annotations\5.1.2.Final\hibernate-commons-annotations-5.1.2.Final.jar;C:\Users\Pato\.m2\repository\org\glassfish\jaxb\jaxb-runtime\2.3.3\jaxb-runtime-2.3.3.jar;C:\Users\Pato\.m2\repository\org\glassfish\jaxb\txw2\2.3.3\txw2-2.3.3.jar;C:\Users\Pato\.m2\repository\com\sun\istack\istack-commons-runtime\3.0.11\istack-commons-runtime-3.0.11.jar;C:\Users\Pato\.m2\repository\com\sun\activation\jakarta.activation\1.2.2\jakarta.activation-1.2.2.jar;C:\Users\Pato\.m2\repository\org\springframework\data\spring-data-jpa\2.4.3\spring-data-jpa-2.4.3.jar;C:\Users\Pato\.m2\repository\org\springframework\data\spring-data-commons\2.4.3\spring-data-commons-2.4.3.jar;C:\Users\Pato\.m2\repository\org\springframework\spring-orm\5.3.3\spring-orm-5.3.3.jar;C:\Users\Pato\.m2\repository\org\springframework\spring-context\5.3.3\spring-context-5.3.3.jar;C:\Users\Pato\.m2\repository\org\springframework\spring-tx\5.3.3\spring-tx-5.3.3.jar;C:\Users\Pato\.m2\repository\org\springframework\spring-beans\5.3.3\spring-beans-5.3.3.jar;C:\Users\Pato\.m2\repository\org\slf4j\slf4j-api\1.7.30\slf4j-api-1.7.30.jar;C:\Users\Pato\.m2\repository\org\springframework\spring-aspects\5.3.3\spring-aspects-5.3.3.jar;C:\Users\Pato\.m2\repository\org\springframework\boot\spring-boot-starter-web\2.4.2\spring-boot-starter-web-2.4.2.jar;C:\Users\Pato\.m2\repository\org\springframework\boot\spring-boot-starter\2.4.2\spring-boot-starter-2.4.2.jar;C:\Users\Pato\.m2\repository\org\springframework\boot\spring-boot\2.4.2\spring-boot-2.4.2.jar;C:\Users\Pato\.m2\repository\org\springframework\boot\spring-boot-autoconfigure\2.4.2\spring-boot-autoconfigure-2.4.2.jar;C:\Users\Pato\.m2\repository\org\springframework\boot\spring-boot-starter-logging\2.4.2\spring-boot-starter-logging-2.4.2.jar;C:\Users\Pato\.m2\repository\ch\qos\logback\logback-classic\1.2.3\logback-classic-1.2.3.jar;C:\Users\Pato\.m2\repository\ch\qos\logback\logback-core\1.2.3\logback-core-1.2.3.jar;C:\Users\Pato\.m2\repository\org\apache\logging\log4j\log4j-to-slf4j\2.13.3\log4j-to-slf4j-2.13.3.jar;C:\Users\Pato\.m2\repository\org\apache\logging\log4j\log4j-api\2.13.3\log4j-api-2.13.3.jar;C:\Users\Pato\.m2\repository\org\slf4j\jul-to-slf4j\1.7.30\jul-to-slf4j-1.7.30.jar;C:\Users\Pato\.m2\repository\jakarta\annotation\jakarta.annotation-api\1.3.5\jakarta.annotation-api-1.3.5.jar;C:\Users\Pato\.m2\repository\org\yaml\snakeyaml\1.27\snakeyaml-1.27.jar;C:\Users\Pato\.m2\repository\org\springframework\boot\spring-boot-starter-json\2.4.2\spring-boot-starter-json-2.4.2.jar;C:\Users\Pato\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.11.4\jackson-databind-2.11.4.jar;C:\Users\Pato\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.11.4\jackson-annotations-2.11.4.jar;C:\Users\Pato\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.11.4\jackson-core-2.11.4.jar;C:\Users\Pato\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jdk8\2.11.4\jackson-datatype-jdk8-2.11.4.jar;C:\Users\Pato\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jsr310\2.11.4\jackson-datatype-jsr310-2.11.4.jar;C:\Users\Pato\.m2\repository\com\fasterxml\jackson\module\jackson-module-parameter-names\2.11.4\jackson-module-parameter-names-2.11.4.jar;C:\Users\Pato\.m2\repository\org\springframework\boot\spring-boot-starter-tomcat\2.4.2\spring-boot-starter-tomcat-2.4.2.jar;C:\Users\Pato\.m2\repository\org\apache\tomcat\embed\tomcat-embed-core\9.0.41\tomcat-embed-core-9.0.41.jar;C:\Users\Pato\.m2\repository\org\glassfish\jakarta.el\3.0.3\jakarta.el-3.0.3.jar;C:\Users\Pato\.m2\repository\org\apache\tomcat\embed\tomcat-embed-websocket\9.0.41\tomcat-embed-websocket-9.0.41.jar;C:\Users\Pato\.m2\repository\org\springframework\spring-web\5.3.3\spring-web-5.3.3.jar;C:\Users\Pato\.m2\repository\org\springframework\spring-webmvc\5.3.3\spring-webmvc-5.3.3.jar;C:\Users\Pato\.m2\repository\org\springframework\spring-expression\5.3.3\spring-expression-5.3.3.jar;C:\Users\Pato\.m2\repository\org\springframework\boot\spring-boot-starter-test\2.4.2\spring-boot-starter-test-2.4.2.jar;C:\Users\Pato\.m2\repository\org\springframework\boot\spring-boot-test\2.4.2\spring-boot-test-2.4.2.jar;C:\Users\Pato\.m2\repository\org\springframework\boot\spring-boot-test-autoconfigure\2.4.2\spring-boot-test-autoconfigure-2.4.2.jar;C:\Users\Pato\.m2\repository\com\jayway\jsonpath\json-path\2.4.0\json-path-2.4.0.jar;C:\Users\Pato\.m2\repository\net\minidev\json-smart\2.3\json-smart-2.3.jar;C:\Users\Pato\.m2\repository\net\minidev\accessors-smart\1.2\accessors-smart-1.2.jar;C:\Users\Pato\.m2\repository\org\ow2\asm\asm\5.0.4\asm-5.0.4.jar;C:\Users\Pato\.m2\repository\jakarta\xml\bind\jakarta.xml.bind-api\2.3.3\jakarta.xml.bind-api-2.3.3.jar;C:\Users\Pato\.m2\repository\jakarta\activation\jakarta.activation-api\1.2.2\jakarta.activation-api-1.2.2.jar;C:\Users\Pato\.m2\repository\org\assertj\assertj-core\3.18.1\assertj-core-3.18.1.jar;C:\Users\Pato\.m2\repository\org\hamcrest\hamcrest\2.2\hamcrest-2.2.jar;C:\Users\Pato\.m2\repository\org\junit\jupiter\junit-jupiter\5.7.0\junit-jupiter-5.7.0.jar;C:\Users\Pato\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.7.0\junit-jupiter-api-5.7.0.jar;C:\Users\Pato\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\Pato\.m2\repository\org\junit\platform\junit-platform-commons\1.7.0\junit-platform-commons-1.7.0.jar;C:\Users\Pato\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.7.0\junit-jupiter-params-5.7.0.jar;C:\Users\Pato\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.7.0\junit-jupiter-engine-5.7.0.jar;C:\Users\Pato\.m2\repository\org\junit\platform\junit-platform-engine\1.7.0\junit-platform-engine-1.7.0.jar;C:\Users\Pato\.m2\repository\org\mockito\mockito-core\3.6.28\mockito-core-3.6.28.jar;C:\Users\Pato\.m2\repository\net\bytebuddy\byte-buddy-agent\1.10.19\byte-buddy-agent-1.10.19.jar;C:\Users\Pato\.m2\repository\org\objenesis\objenesis\3.1\objenesis-3.1.jar;C:\Users\Pato\.m2\repository\org\mockito\mockito-junit-jupiter\3.6.28\mockito-junit-jupiter-3.6.28.jar;C:\Users\Pato\.m2\repository\org\skyscreamer\jsonassert\1.5.0\jsonassert-1.5.0.jar;C:\Users\Pato\.m2\repository\com\vaadin\external\google\android-json\0.0.20131108.vaadin1\android-json-0.0.20131108.vaadin1.jar;C:\Users\Pato\.m2\repository\org\springframework\spring-core\5.3.3\spring-core-5.3.3.jar;C:\Users\Pato\.m2\repository\org\springframework\spring-jcl\5.3.3\spring-jcl-5.3.3.jar;C:\Users\Pato\.m2\repository\org\springframework\spring-test\5.3.3\spring-test-5.3.3.jar;C:\Users\Pato\.m2\repository\org\xmlunit\xmlunit-core\2.7.0\xmlunit-core-2.7.0.jar;C:\Users\Pato\.m2\repository\com\h2database\h2\1.4.200\h2-1.4.200.jar;"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="user.variant" value=""/>
+    <property name="java.vendor.url" value="https://openjdk.java.net/"/>
+    <property name="user.timezone" value=""/>
+    <property name="java.vm.specification.version" value="11"/>
+    <property name="os.name" value="Windows 10"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="AR"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-11.0.10\bin"/>
+    <property name="sun.java.command" value="C:\Users\Pato\AppData\Local\Temp\surefire11596950217118169536\surefirebooter14107419958669540698.jar C:\Users\Pato\AppData\Local\Temp\surefire11596950217118169536 2021-02-14T02-04-12_754-jvmRun1 surefire11445739588730271685tmp surefire_02770799195719862880tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="C:\Users\Pato\Dev\Metodos\TPM2\resources-backend\recursos-backend\target\test-classes;C:\Users\Pato\Dev\Metodos\TPM2\resources-backend\recursos-backend\target\classes;C:\Users\Pato\.m2\repository\io\cucumber\cucumber-java\6.9.1\cucumber-java-6.9.1.jar;C:\Users\Pato\.m2\repository\io\cucumber\cucumber-core\6.9.1\cucumber-core-6.9.1.jar;C:\Users\Pato\.m2\repository\io\cucumber\cucumber-gherkin\6.9.1\cucumber-gherkin-6.9.1.jar;C:\Users\Pato\.m2\repository\io\cucumber\cucumber-gherkin-messages\6.9.1\cucumber-gherkin-messages-6.9.1.jar;C:\Users\Pato\.m2\repository\io\cucumber\messages\13.2.1\messages-13.2.1.jar;C:\Users\Pato\.m2\repository\io\cucumber\tag-expressions\3.0.0\tag-expressions-3.0.0.jar;C:\Users\Pato\.m2\repository\io\cucumber\cucumber-expressions\10.3.0\cucumber-expressions-10.3.0.jar;C:\Users\Pato\.m2\repository\io\cucumber\datatable\3.5.0\datatable-3.5.0.jar;C:\Users\Pato\.m2\repository\io\cucumber\cucumber-plugin\6.9.1\cucumber-plugin-6.9.1.jar;C:\Users\Pato\.m2\repository\io\cucumber\docstring\6.9.1\docstring-6.9.1.jar;C:\Users\Pato\.m2\repository\io\cucumber\html-formatter\9.0.0\html-formatter-9.0.0.jar;C:\Users\Pato\.m2\repository\io\cucumber\create-meta\2.0.4\create-meta-2.0.4.jar;C:\Users\Pato\.m2\repository\org\apiguardian\apiguardian-api\1.1.0\apiguardian-api-1.1.0.jar;C:\Users\Pato\.m2\repository\io\cucumber\cucumber-junit\6.9.1\cucumber-junit-6.9.1.jar;C:\Users\Pato\.m2\repository\junit\junit\4.13.1\junit-4.13.1.jar;C:\Users\Pato\.m2\repository\org\hamcrest\hamcrest-core\2.2\hamcrest-core-2.2.jar;C:\Users\Pato\.m2\repository\org\springframework\boot\spring-boot-starter-data-jpa\2.4.2\spring-boot-starter-data-jpa-2.4.2.jar;C:\Users\Pato\.m2\repository\org\springframework\boot\spring-boot-starter-aop\2.4.2\spring-boot-starter-aop-2.4.2.jar;C:\Users\Pato\.m2\repository\org\springframework\spring-aop\5.3.3\spring-aop-5.3.3.jar;C:\Users\Pato\.m2\repository\org\aspectj\aspectjweaver\1.9.6\aspectjweaver-1.9.6.jar;C:\Users\Pato\.m2\repository\org\springframework\boot\spring-boot-starter-jdbc\2.4.2\spring-boot-starter-jdbc-2.4.2.jar;C:\Users\Pato\.m2\repository\com\zaxxer\HikariCP\3.4.5\HikariCP-3.4.5.jar;C:\Users\Pato\.m2\repository\org\springframework\spring-jdbc\5.3.3\spring-jdbc-5.3.3.jar;C:\Users\Pato\.m2\repository\jakarta\transaction\jakarta.transaction-api\1.3.3\jakarta.transaction-api-1.3.3.jar;C:\Users\Pato\.m2\repository\jakarta\persistence\jakarta.persistence-api\2.2.3\jakarta.persistence-api-2.2.3.jar;C:\Users\Pato\.m2\repository\org\hibernate\hibernate-core\5.4.27.Final\hibernate-core-5.4.27.Final.jar;C:\Users\Pato\.m2\repository\org\jboss\logging\jboss-logging\3.4.1.Final\jboss-logging-3.4.1.Final.jar;C:\Users\Pato\.m2\repository\org\javassist\javassist\3.27.0-GA\javassist-3.27.0-GA.jar;C:\Users\Pato\.m2\repository\net\bytebuddy\byte-buddy\1.10.19\byte-buddy-1.10.19.jar;C:\Users\Pato\.m2\repository\antlr\antlr\2.7.7\antlr-2.7.7.jar;C:\Users\Pato\.m2\repository\org\jboss\jandex\2.1.3.Final\jandex-2.1.3.Final.jar;C:\Users\Pato\.m2\repository\com\fasterxml\classmate\1.5.1\classmate-1.5.1.jar;C:\Users\Pato\.m2\repository\org\dom4j\dom4j\2.1.3\dom4j-2.1.3.jar;C:\Users\Pato\.m2\repository\org\hibernate\common\hibernate-commons-annotations\5.1.2.Final\hibernate-commons-annotations-5.1.2.Final.jar;C:\Users\Pato\.m2\repository\org\glassfish\jaxb\jaxb-runtime\2.3.3\jaxb-runtime-2.3.3.jar;C:\Users\Pato\.m2\repository\org\glassfish\jaxb\txw2\2.3.3\txw2-2.3.3.jar;C:\Users\Pato\.m2\repository\com\sun\istack\istack-commons-runtime\3.0.11\istack-commons-runtime-3.0.11.jar;C:\Users\Pato\.m2\repository\com\sun\activation\jakarta.activation\1.2.2\jakarta.activation-1.2.2.jar;C:\Users\Pato\.m2\repository\org\springframework\data\spring-data-jpa\2.4.3\spring-data-jpa-2.4.3.jar;C:\Users\Pato\.m2\repository\org\springframework\data\spring-data-commons\2.4.3\spring-data-commons-2.4.3.jar;C:\Users\Pato\.m2\repository\org\springframework\spring-orm\5.3.3\spring-orm-5.3.3.jar;C:\Users\Pato\.m2\repository\org\springframework\spring-context\5.3.3\spring-context-5.3.3.jar;C:\Users\Pato\.m2\repository\org\springframework\spring-tx\5.3.3\spring-tx-5.3.3.jar;C:\Users\Pato\.m2\repository\org\springframework\spring-beans\5.3.3\spring-beans-5.3.3.jar;C:\Users\Pato\.m2\repository\org\slf4j\slf4j-api\1.7.30\slf4j-api-1.7.30.jar;C:\Users\Pato\.m2\repository\org\springframework\spring-aspects\5.3.3\spring-aspects-5.3.3.jar;C:\Users\Pato\.m2\repository\org\springframework\boot\spring-boot-starter-web\2.4.2\spring-boot-starter-web-2.4.2.jar;C:\Users\Pato\.m2\repository\org\springframework\boot\spring-boot-starter\2.4.2\spring-boot-starter-2.4.2.jar;C:\Users\Pato\.m2\repository\org\springframework\boot\spring-boot\2.4.2\spring-boot-2.4.2.jar;C:\Users\Pato\.m2\repository\org\springframework\boot\spring-boot-autoconfigure\2.4.2\spring-boot-autoconfigure-2.4.2.jar;C:\Users\Pato\.m2\repository\org\springframework\boot\spring-boot-starter-logging\2.4.2\spring-boot-starter-logging-2.4.2.jar;C:\Users\Pato\.m2\repository\ch\qos\logback\logback-classic\1.2.3\logback-classic-1.2.3.jar;C:\Users\Pato\.m2\repository\ch\qos\logback\logback-core\1.2.3\logback-core-1.2.3.jar;C:\Users\Pato\.m2\repository\org\apache\logging\log4j\log4j-to-slf4j\2.13.3\log4j-to-slf4j-2.13.3.jar;C:\Users\Pato\.m2\repository\org\apache\logging\log4j\log4j-api\2.13.3\log4j-api-2.13.3.jar;C:\Users\Pato\.m2\repository\org\slf4j\jul-to-slf4j\1.7.30\jul-to-slf4j-1.7.30.jar;C:\Users\Pato\.m2\repository\jakarta\annotation\jakarta.annotation-api\1.3.5\jakarta.annotation-api-1.3.5.jar;C:\Users\Pato\.m2\repository\org\yaml\snakeyaml\1.27\snakeyaml-1.27.jar;C:\Users\Pato\.m2\repository\org\springframework\boot\spring-boot-starter-json\2.4.2\spring-boot-starter-json-2.4.2.jar;C:\Users\Pato\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.11.4\jackson-databind-2.11.4.jar;C:\Users\Pato\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.11.4\jackson-annotations-2.11.4.jar;C:\Users\Pato\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.11.4\jackson-core-2.11.4.jar;C:\Users\Pato\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jdk8\2.11.4\jackson-datatype-jdk8-2.11.4.jar;C:\Users\Pato\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jsr310\2.11.4\jackson-datatype-jsr310-2.11.4.jar;C:\Users\Pato\.m2\repository\com\fasterxml\jackson\module\jackson-module-parameter-names\2.11.4\jackson-module-parameter-names-2.11.4.jar;C:\Users\Pato\.m2\repository\org\springframework\boot\spring-boot-starter-tomcat\2.4.2\spring-boot-starter-tomcat-2.4.2.jar;C:\Users\Pato\.m2\repository\org\apache\tomcat\embed\tomcat-embed-core\9.0.41\tomcat-embed-core-9.0.41.jar;C:\Users\Pato\.m2\repository\org\glassfish\jakarta.el\3.0.3\jakarta.el-3.0.3.jar;C:\Users\Pato\.m2\repository\org\apache\tomcat\embed\tomcat-embed-websocket\9.0.41\tomcat-embed-websocket-9.0.41.jar;C:\Users\Pato\.m2\repository\org\springframework\spring-web\5.3.3\spring-web-5.3.3.jar;C:\Users\Pato\.m2\repository\org\springframework\spring-webmvc\5.3.3\spring-webmvc-5.3.3.jar;C:\Users\Pato\.m2\repository\org\springframework\spring-expression\5.3.3\spring-expression-5.3.3.jar;C:\Users\Pato\.m2\repository\org\springframework\boot\spring-boot-starter-test\2.4.2\spring-boot-starter-test-2.4.2.jar;C:\Users\Pato\.m2\repository\org\springframework\boot\spring-boot-test\2.4.2\spring-boot-test-2.4.2.jar;C:\Users\Pato\.m2\repository\org\springframework\boot\spring-boot-test-autoconfigure\2.4.2\spring-boot-test-autoconfigure-2.4.2.jar;C:\Users\Pato\.m2\repository\com\jayway\jsonpath\json-path\2.4.0\json-path-2.4.0.jar;C:\Users\Pato\.m2\repository\net\minidev\json-smart\2.3\json-smart-2.3.jar;C:\Users\Pato\.m2\repository\net\minidev\accessors-smart\1.2\accessors-smart-1.2.jar;C:\Users\Pato\.m2\repository\org\ow2\asm\asm\5.0.4\asm-5.0.4.jar;C:\Users\Pato\.m2\repository\jakarta\xml\bind\jakarta.xml.bind-api\2.3.3\jakarta.xml.bind-api-2.3.3.jar;C:\Users\Pato\.m2\repository\jakarta\activation\jakarta.activation-api\1.2.2\jakarta.activation-api-1.2.2.jar;C:\Users\Pato\.m2\repository\org\assertj\assertj-core\3.18.1\assertj-core-3.18.1.jar;C:\Users\Pato\.m2\repository\org\hamcrest\hamcrest\2.2\hamcrest-2.2.jar;C:\Users\Pato\.m2\repository\org\junit\jupiter\junit-jupiter\5.7.0\junit-jupiter-5.7.0.jar;C:\Users\Pato\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.7.0\junit-jupiter-api-5.7.0.jar;C:\Users\Pato\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\Pato\.m2\repository\org\junit\platform\junit-platform-commons\1.7.0\junit-platform-commons-1.7.0.jar;C:\Users\Pato\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.7.0\junit-jupiter-params-5.7.0.jar;C:\Users\Pato\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.7.0\junit-jupiter-engine-5.7.0.jar;C:\Users\Pato\.m2\repository\org\junit\platform\junit-platform-engine\1.7.0\junit-platform-engine-1.7.0.jar;C:\Users\Pato\.m2\repository\org\mockito\mockito-core\3.6.28\mockito-core-3.6.28.jar;C:\Users\Pato\.m2\repository\net\bytebuddy\byte-buddy-agent\1.10.19\byte-buddy-agent-1.10.19.jar;C:\Users\Pato\.m2\repository\org\objenesis\objenesis\3.1\objenesis-3.1.jar;C:\Users\Pato\.m2\repository\org\mockito\mockito-junit-jupiter\3.6.28\mockito-junit-jupiter-3.6.28.jar;C:\Users\Pato\.m2\repository\org\skyscreamer\jsonassert\1.5.0\jsonassert-1.5.0.jar;C:\Users\Pato\.m2\repository\com\vaadin\external\google\android-json\0.0.20131108.vaadin1\android-json-0.0.20131108.vaadin1.jar;C:\Users\Pato\.m2\repository\org\springframework\spring-core\5.3.3\spring-core-5.3.3.jar;C:\Users\Pato\.m2\repository\org\springframework\spring-jcl\5.3.3\spring-jcl-5.3.3.jar;C:\Users\Pato\.m2\repository\org\springframework\spring-test\5.3.3\spring-test-5.3.3.jar;C:\Users\Pato\.m2\repository\org\xmlunit\xmlunit-core\2.7.0\xmlunit-core-2.7.0.jar;C:\Users\Pato\.m2\repository\com\h2database\h2\1.4.200\h2-1.4.200.jar;"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="C:\Users\Pato"/>
+    <property name="user.language" value="es"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2021-01-19"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk-11.0.10"/>
+    <property name="file.separator" value="\"/>
+    <property name="basedir" value="C:\Users\Pato\Dev\Metodos\TPM2\resources-backend\recursos-backend"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
+    <property name="surefire.real.class.path" value="C:\Users\Pato\AppData\Local\Temp\surefire11596950217118169536\surefirebooter14107419958669540698.jar"/>
+    <property name="user.script" value=""/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="11.0.10+8-LTS-162"/>
+    <property name="user.name" value="Pato"/>
+    <property name="path.separator" value=";"/>
+    <property name="os.version" value="10.0"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="file.encoding" value="Cp1252"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="java.vendor.version" value="18.9"/>
+    <property name="localRepository" value="C:\Users\Pato\.m2\repository"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="C:\Users\Pato\AppData\Local\Temp\"/>
+    <property name="java.version" value="11.0.10"/>
+    <property name="user.dir" value="C:\Users\Pato\Dev\Metodos\TPM2\resources-backend\recursos-backend"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk-11.0.10\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files\Common Files\Oracle\Java\javapath;C:\ProgramData\Anaconda3;C:\ProgramData\Anaconda3\Library\mingw-w64\bin;C:\ProgramData\Anaconda3\Library\usr\bin;C:\ProgramData\Anaconda3\Library\bin;C:\ProgramData\Anaconda3\Scripts;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\DevTools\gradle-6.7\bin;C:\DevTools\apache-maven-3.6.3\bin;C:\Program Files\Java\jdk-15\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\nodejs\;C:\Program Files\Git\cmd;C:\Users\Pato\AppData\Local\Microsoft\WindowsApps;C:\Users\Pato\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files\JetBrains\IntelliJ IDEA 2020.2.3\bin;;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2020.2.3\bin;;C:\Users\Pato\AppData\Roaming\npm;C:\Users\Pato\AppData\Local\GitHubDesktop\bin;."/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.vm.version" value="11.0.10+8-LTS-162"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="55.0"/>
+  </properties>
+  <testcase name="create hours to a resource" classname="create update delete or hours to a project" time="0.277">
+    <error message="Step [a resource id {int} who works {int} hours in the task {int}] is defined with 4 parameters at &apos;com.aninfo.steps.HoursStepDefinitions.a_resource_id_who_works_hours_in_the_task(java.lang.Integer,java.lang.Integer,java.lang.Integer,java.lang.Integer)&apos;.&#10;However, the gherkin step has 3 arguments:&#10; * 14&#10; * 3&#10; * 190&#10;Step text: a resource id 14 who works 3 hours in the task 190" type="io.cucumber.core.exception.CucumberException">io.cucumber.core.exception.CucumberException: 
+Step [a resource id {int} who works {int} hours in the task {int}] is defined with 4 parameters at 'com.aninfo.steps.HoursStepDefinitions.a_resource_id_who_works_hours_in_the_task(java.lang.Integer,java.lang.Integer,java.lang.Integer,java.lang.Integer)'.
+However, the gherkin step has 3 arguments:
+ * 14
+ * 3
+ * 190
+Step text: a resource id 14 who works 3 hours in the task 190
+</error>
+    <system-out><![CDATA[
+Scenario: create hours to a resource                           &amp#27;[90m# src/test/resources/features/hours.feature:3&amp#27;[0m
+  &amp#27;[31mGiven &amp#27;[0m&amp#27;[31ma resource id &amp#27;[0m&amp#27;[31m&amp#27;[1m14&amp#27;[0m&amp#27;[31m who works &amp#27;[0m&amp#27;[31m&amp#27;[1m3&amp#27;[0m&amp#27;[31m hours in the task &amp#27;[0m&amp#27;[31m&amp#27;[1m190&amp#27;[0m     &amp#27;[90m# com.aninfo.steps.HoursStepDefinitions.a_resource_id_who_works_hours_in_the_task(java.lang.Integer,java.lang.Integer,java.lang.Integer,java.lang.Integer)&amp#27;[0m
+      &amp#27;[31mio.cucumber.core.exception.CucumberException: Step [a resource id {int} who works {int} hours in the task {int}] is defined with 4 parameters at 'com.aninfo.steps.HoursStepDefinitions.a_resource_id_who_works_hours_in_the_task(java.lang.Integer,java.lang.Integer,java.lang.Integer,java.lang.Integer)'.
+However, the gherkin step has 3 arguments:
+ * 14
+ * 3
+ * 190
+Step text: a resource id 14 who works 3 hours in the task 190
+	at io.cucumber.core.runner.PickleStepDefinitionMatch.arityMismatch(PickleStepDefinitionMatch.java:83)
+	at io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:42)
+	at io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)
+	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:92)
+	at io.cucumber.core.runner.TestStep.run(TestStep.java:64)
+	at io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)
+	at io.cucumber.core.runner.TestCase.run(TestCase.java:104)
+	at io.cucumber.core.runner.Runner.runPickle(Runner.java:71)
+	at io.cucumber.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:151)
+	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:135)
+	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:27)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:199)
+	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:90)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at io.cucumber.junit.Cucumber$RunCucumber.evaluate(Cucumber.java:234)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:365)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:273)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:238)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:159)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:379)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:340)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:125)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:413)
+&amp#27;[0m
+  &amp#27;[36mWhen &amp#27;[0m&amp#27;[36msave the hours&amp#27;[0m                                          &amp#27;[90m# com.aninfo.steps.HoursStepDefinitions.save_the_hours()&amp#27;[0m
+  &amp#27;[36mThen &amp#27;[0m&amp#27;[36mthe resource id &amp#27;[0m&amp#27;[36m&amp#27;[1m14&amp#27;[0m&amp#27;[36m has &amp#27;[0m&amp#27;[36m&amp#27;[1m3&amp#27;[0m&amp#27;[36m hours assigned in the task &amp#27;[0m&amp#27;[36m&amp#27;[1m190&amp#27;[0m &amp#27;[90m# com.aninfo.steps.HoursStepDefinitions.the_resource_id_has_hours_assigned_in_the_task(java.lang.Integer,java.lang.Integer,java.lang.Integer)&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="create negative hours to a resource" classname="create update delete or hours to a project" time="0.01">
+    <error message="The step &quot;a resource id 19 who works the task 150&quot; is undefined. You can implement it using the snippet(s) below:&#10;&#10;@Given(&quot;a resource id {int} who works the task {int}&quot;)&#10;public void a_resource_id_who_works_the_task(Integer int1, Integer int2) {&#10;    // Write code here that turns the phrase above into concrete actions&#10;    throw new io.cucumber.java.PendingException();&#10;}&#10;&#10;&#10;Some other steps were also undefined:&#10;&#10;@When(&quot;add {int} hours to the resource id {int}&quot;)&#10;public void add_hours_to_the_resource_id(Integer int1, Integer int2) {&#10;    // Write code here that turns the phrase above into concrete actions&#10;    throw new io.cucumber.java.PendingException();&#10;}&#10;@Then(&quot;i get invalid number error&quot;)&#10;public void i_get_invalid_number_error() {&#10;    // Write code here that turns the phrase above into concrete actions&#10;    throw new io.cucumber.java.PendingException();&#10;}&#10;" type="io.cucumber.junit.UndefinedStepException">io.cucumber.junit.UndefinedStepException: 
+The step "a resource id 19 who works the task 150" is undefined. You can implement it using the snippet(s) below:
+
+@Given("a resource id {int} who works the task {int}")
+public void a_resource_id_who_works_the_task(Integer int1, Integer int2) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+
+Some other steps were also undefined:
+
+@When("add {int} hours to the resource id {int}")
+public void add_hours_to_the_resource_id(Integer int1, Integer int2) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("i get invalid number error")
+public void i_get_invalid_number_error() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+</error>
+    <system-out><![CDATA[
+Scenario: create negative hours to a resource   &amp#27;[90m# src/test/resources/features/hours.feature:8&amp#27;[0m
+  &amp#27;[33mGiven &amp#27;[0m&amp#27;[33ma resource id 19 who works the task 150&amp#27;[0m &amp#27;[90m# null&amp#27;[0m
+  &amp#27;[36mWhen &amp#27;[0m&amp#27;[36madd -3 hours to the resource id 19&amp#27;[0m       &amp#27;[90m# null&amp#27;[0m
+  &amp#27;[36mThen &amp#27;[0m&amp#27;[36mi get invalid number error&amp#27;[0m               &amp#27;[90m# null&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="create zero hours to a resource" classname="create update delete or hours to a project" time="0.011">
+    <error message="The step &quot;a resource id 19 who works the task 150&quot; is undefined. You can implement it using the snippet(s) below:&#10;&#10;@Given(&quot;a resource id {int} who works the task {int}&quot;)&#10;public void a_resource_id_who_works_the_task(Integer int1, Integer int2) {&#10;    // Write code here that turns the phrase above into concrete actions&#10;    throw new io.cucumber.java.PendingException();&#10;}&#10;&#10;&#10;Some other steps were also undefined:&#10;&#10;@When(&quot;add {int} hours to the resource id {int}&quot;)&#10;public void add_hours_to_the_resource_id(Integer int1, Integer int2) {&#10;    // Write code here that turns the phrase above into concrete actions&#10;    throw new io.cucumber.java.PendingException();&#10;}&#10;@Then(&quot;i get invalid number error&quot;)&#10;public void i_get_invalid_number_error() {&#10;    // Write code here that turns the phrase above into concrete actions&#10;    throw new io.cucumber.java.PendingException();&#10;}&#10;" type="io.cucumber.junit.UndefinedStepException">io.cucumber.junit.UndefinedStepException: 
+The step "a resource id 19 who works the task 150" is undefined. You can implement it using the snippet(s) below:
+
+@Given("a resource id {int} who works the task {int}")
+public void a_resource_id_who_works_the_task(Integer int1, Integer int2) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+
+Some other steps were also undefined:
+
+@When("add {int} hours to the resource id {int}")
+public void add_hours_to_the_resource_id(Integer int1, Integer int2) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("i get invalid number error")
+public void i_get_invalid_number_error() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+</error>
+    <system-out><![CDATA[
+Scenario: create zero hours to a resource       &amp#27;[90m# src/test/resources/features/hours.feature:13&amp#27;[0m
+  &amp#27;[33mGiven &amp#27;[0m&amp#27;[33ma resource id 19 who works the task 150&amp#27;[0m &amp#27;[90m# null&amp#27;[0m
+  &amp#27;[36mWhen &amp#27;[0m&amp#27;[36madd 0 hours to the resource id 19&amp#27;[0m        &amp#27;[90m# null&amp#27;[0m
+  &amp#27;[36mThen &amp#27;[0m&amp#27;[36mi get invalid number error&amp#27;[0m               &amp#27;[90m# null&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="create more than 24 hours to a resource" classname="create update delete or hours to a project" time="0.014">
+    <error message="The step &quot;a resource id 22 who works the task 148&quot; is undefined. You can implement it using the snippet(s) below:&#10;&#10;@Given(&quot;a resource id {int} who works the task {int}&quot;)&#10;public void a_resource_id_who_works_the_task(Integer int1, Integer int2) {&#10;    // Write code here that turns the phrase above into concrete actions&#10;    throw new io.cucumber.java.PendingException();&#10;}&#10;&#10;&#10;Some other steps were also undefined:&#10;&#10;@When(&quot;add {int} hours to the resource id {int}&quot;)&#10;public void add_hours_to_the_resource_id(Integer int1, Integer int2) {&#10;    // Write code here that turns the phrase above into concrete actions&#10;    throw new io.cucumber.java.PendingException();&#10;}&#10;@Then(&quot;i get invalid number error&quot;)&#10;public void i_get_invalid_number_error() {&#10;    // Write code here that turns the phrase above into concrete actions&#10;    throw new io.cucumber.java.PendingException();&#10;}&#10;" type="io.cucumber.junit.UndefinedStepException">io.cucumber.junit.UndefinedStepException: 
+The step "a resource id 22 who works the task 148" is undefined. You can implement it using the snippet(s) below:
+
+@Given("a resource id {int} who works the task {int}")
+public void a_resource_id_who_works_the_task(Integer int1, Integer int2) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+
+Some other steps were also undefined:
+
+@When("add {int} hours to the resource id {int}")
+public void add_hours_to_the_resource_id(Integer int1, Integer int2) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("i get invalid number error")
+public void i_get_invalid_number_error() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+</error>
+    <system-out><![CDATA[
+Scenario: create more than 24 hours to a resource &amp#27;[90m# src/test/resources/features/hours.feature:18&amp#27;[0m
+  &amp#27;[33mGiven &amp#27;[0m&amp#27;[33ma resource id 22 who works the task 148&amp#27;[0m   &amp#27;[90m# null&amp#27;[0m
+  &amp#27;[36mWhen &amp#27;[0m&amp#27;[36madd 25 hours to the resource id 22&amp#27;[0m         &amp#27;[90m# null&amp#27;[0m
+  &amp#27;[36mThen &amp#27;[0m&amp#27;[36mi get invalid number error&amp#27;[0m                 &amp#27;[90m# null&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="assign a hours worked to a task" classname="create update delete or hours to a project" time="0.017">
+    <error message="The step &quot;a resource id 15 who works 2 hours in a task 350&quot; is undefined. You can implement it using the snippet(s) below:&#10;&#10;@Given(&quot;a resource id {int} who works {int} hours in a task {int}&quot;)&#10;public void a_resource_id_who_works_hours_in_a_task(Integer int1, Integer int2, Integer int3) {&#10;    // Write code here that turns the phrase above into concrete actions&#10;    throw new io.cucumber.java.PendingException();&#10;}&#10;&#10;&#10;Some other steps were also undefined:&#10;&#10;@When(&quot;i assign the hours to the task {int}&quot;)&#10;public void i_assign_the_hours_to_the_task(Integer int1) {&#10;    // Write code here that turns the phrase above into concrete actions&#10;    throw new io.cucumber.java.PendingException();&#10;}&#10;@Then(&quot;the resource id {int} has {int} hours assigned to a task {int}&quot;)&#10;public void the_resource_id_has_hours_assigned_to_a_task(Integer int1, Integer int2, Integer int3) {&#10;    // Write code here that turns the phrase above into concrete actions&#10;    throw new io.cucumber.java.PendingException();&#10;}&#10;" type="io.cucumber.junit.UndefinedStepException">io.cucumber.junit.UndefinedStepException: 
+The step "a resource id 15 who works 2 hours in a task 350" is undefined. You can implement it using the snippet(s) below:
+
+@Given("a resource id {int} who works {int} hours in a task {int}")
+public void a_resource_id_who_works_hours_in_a_task(Integer int1, Integer int2, Integer int3) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+
+Some other steps were also undefined:
+
+@When("i assign the hours to the task {int}")
+public void i_assign_the_hours_to_the_task(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("the resource id {int} has {int} hours assigned to a task {int}")
+public void the_resource_id_has_hours_assigned_to_a_task(Integer int1, Integer int2, Integer int3) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+</error>
+    <system-out><![CDATA[
+Scenario: assign a hours worked to a task                    &amp#27;[90m# src/test/resources/features/hours.feature:23&amp#27;[0m
+  &amp#27;[33mGiven &amp#27;[0m&amp#27;[33ma resource id 15 who works 2 hours in a task 350&amp#27;[0m     &amp#27;[90m# null&amp#27;[0m
+  &amp#27;[36mWhen &amp#27;[0m&amp#27;[36mi assign the hours to the task 350&amp#27;[0m                    &amp#27;[90m# null&amp#27;[0m
+  &amp#27;[36mThen &amp#27;[0m&amp#27;[36mthe resource id 15 has 2 hours assigned to a task 350&amp#27;[0m &amp#27;[90m# null&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="update hours from a resource" classname="create update delete or hours to a project" time="0.027">
+    <error message="The step &quot;a resource id 17 with 3 hours assigned to a task 350&quot; is undefined. You can implement it using the snippet(s) below:&#10;&#10;@Given(&quot;a resource id {int} with {int} hours assigned to a task {int}&quot;)&#10;public void a_resource_id_with_hours_assigned_to_a_task(Integer int1, Integer int2, Integer int3) {&#10;    // Write code here that turns the phrase above into concrete actions&#10;    throw new io.cucumber.java.PendingException();&#10;}&#10;&#10;&#10;Some other steps were also undefined:&#10;&#10;@When(&quot;i modify the task {int}&quot;)&#10;public void i_modify_the_task(Integer int1) {&#10;    // Write code here that turns the phrase above into concrete actions&#10;    throw new io.cucumber.java.PendingException();&#10;}&#10;@Then(&quot;the resource id {int} has {int} hours assigned to the new task {int}&quot;)&#10;public void the_resource_id_has_hours_assigned_to_the_new_task(Integer int1, Integer int2, Integer int3) {&#10;    // Write code here that turns the phrase above into concrete actions&#10;    throw new io.cucumber.java.PendingException();&#10;}&#10;" type="io.cucumber.junit.UndefinedStepException">io.cucumber.junit.UndefinedStepException: 
+The step "a resource id 17 with 3 hours assigned to a task 350" is undefined. You can implement it using the snippet(s) below:
+
+@Given("a resource id {int} with {int} hours assigned to a task {int}")
+public void a_resource_id_with_hours_assigned_to_a_task(Integer int1, Integer int2, Integer int3) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+
+Some other steps were also undefined:
+
+@When("i modify the task {int}")
+public void i_modify_the_task(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("the resource id {int} has {int} hours assigned to the new task {int}")
+public void the_resource_id_has_hours_assigned_to_the_new_task(Integer int1, Integer int2, Integer int3) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+</error>
+    <system-out><![CDATA[
+Scenario: update hours from a resource                             &amp#27;[90m# src/test/resources/features/hours.feature:28&amp#27;[0m
+  &amp#27;[33mGiven &amp#27;[0m&amp#27;[33ma resource id 17 with 3 hours assigned to a task 350&amp#27;[0m       &amp#27;[90m# null&amp#27;[0m
+  &amp#27;[36mWhen &amp#27;[0m&amp#27;[36mi modify the task 350&amp#27;[0m                                       &amp#27;[90m# null&amp#27;[0m
+  &amp#27;[36mThen &amp#27;[0m&amp#27;[36mthe resource id 17 has 3 hours assigned to the new task 174&amp#27;[0m &amp#27;[90m# null&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="update date from the hours of a resource" classname="create update delete or hours to a project" time="0.026">
+    <error message="The step &quot;a resource id 15 with 4 hours on 20210115 assigned to task 244&quot; is undefined. You can implement it using the snippet(s) below:&#10;&#10;@Given(&quot;a resource id {int} with {int} hours on {int} assigned to task {int}&quot;)&#10;public void a_resource_id_with_hours_on_assigned_to_task(Integer int1, Integer int2, Integer int3, Integer int4) {&#10;    // Write code here that turns the phrase above into concrete actions&#10;    throw new io.cucumber.java.PendingException();&#10;}&#10;&#10;&#10;Some other steps were also undefined:&#10;&#10;@When(&quot;i modify the date to {int}&quot;)&#10;public void i_modify_the_date_to(Integer int1) {&#10;    // Write code here that turns the phrase above into concrete actions&#10;    throw new io.cucumber.java.PendingException();&#10;}&#10;@Then(&quot;the date of the {int} hours assigned to resource ir {int} to task {int} is {int}&quot;)&#10;public void the_date_of_the_hours_assigned_to_resource_ir_to_task_is(Integer int1, Integer int2, Integer int3, Integer int4) {&#10;    // Write code here that turns the phrase above into concrete actions&#10;    throw new io.cucumber.java.PendingException();&#10;}&#10;" type="io.cucumber.junit.UndefinedStepException">io.cucumber.junit.UndefinedStepException: 
+The step "a resource id 15 with 4 hours on 20210115 assigned to task 244" is undefined. You can implement it using the snippet(s) below:
+
+@Given("a resource id {int} with {int} hours on {int} assigned to task {int}")
+public void a_resource_id_with_hours_on_assigned_to_task(Integer int1, Integer int2, Integer int3, Integer int4) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+
+Some other steps were also undefined:
+
+@When("i modify the date to {int}")
+public void i_modify_the_date_to(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("the date of the {int} hours assigned to resource ir {int} to task {int} is {int}")
+public void the_date_of_the_hours_assigned_to_resource_ir_to_task_is(Integer int1, Integer int2, Integer int3, Integer int4) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+</error>
+    <system-out><![CDATA[
+Scenario: update date from the hours of a resource                                &amp#27;[90m# src/test/resources/features/hours.feature:33&amp#27;[0m
+  &amp#27;[33mGiven &amp#27;[0m&amp#27;[33ma resource id 15 with 4 hours on 20210115 assigned to task 244&amp#27;[0m            &amp#27;[90m# null&amp#27;[0m
+  &amp#27;[36mWhen &amp#27;[0m&amp#27;[36mi modify the date to 20210114&amp#27;[0m                                              &amp#27;[90m# null&amp#27;[0m
+  &amp#27;[36mThen &amp#27;[0m&amp#27;[36mthe date of the 4 hours assigned to resource ir 15 to task 244 is 20210114&amp#27;[0m &amp#27;[90m# null&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="delete hours worked from a task" classname="create update delete or hours to a project" time="0.014">
+    <error message="The step &quot;a resource id 4 with 10 hours worked from a task 204&quot; is undefined. You can implement it using the snippet(s) below:&#10;&#10;@Given(&quot;a resource id {int} with {int} hours worked from a task {int}&quot;)&#10;public void a_resource_id_with_hours_worked_from_a_task(Integer int1, Integer int2, Integer int3) {&#10;    // Write code here that turns the phrase above into concrete actions&#10;    throw new io.cucumber.java.PendingException();&#10;}&#10;&#10;&#10;Some other steps were also undefined:&#10;&#10;@When(&quot;i delete {int} hours from the task {int}&quot;)&#10;public void i_delete_hours_from_the_task(Integer int1, Integer int2) {&#10;    // Write code here that turns the phrase above into concrete actions&#10;    throw new io.cucumber.java.PendingException();&#10;}&#10;@Then(&quot;the resource id {int} has {int} hours assigned to the task {int}&quot;)&#10;public void the_resource_id_has_hours_assigned_to_the_task(Integer int1, Integer int2, Integer int3) {&#10;    // Write code here that turns the phrase above into concrete actions&#10;    throw new io.cucumber.java.PendingException();&#10;}&#10;" type="io.cucumber.junit.UndefinedStepException">io.cucumber.junit.UndefinedStepException: 
+The step "a resource id 4 with 10 hours worked from a task 204" is undefined. You can implement it using the snippet(s) below:
+
+@Given("a resource id {int} with {int} hours worked from a task {int}")
+public void a_resource_id_with_hours_worked_from_a_task(Integer int1, Integer int2, Integer int3) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+
+Some other steps were also undefined:
+
+@When("i delete {int} hours from the task {int}")
+public void i_delete_hours_from_the_task(Integer int1, Integer int2) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("the resource id {int} has {int} hours assigned to the task {int}")
+public void the_resource_id_has_hours_assigned_to_the_task(Integer int1, Integer int2, Integer int3) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+</error>
+    <system-out><![CDATA[
+Scenario: delete hours worked from a task                     &amp#27;[90m# src/test/resources/features/hours.feature:38&amp#27;[0m
+  &amp#27;[33mGiven &amp#27;[0m&amp#27;[33ma resource id 4 with 10 hours worked from a task 204&amp#27;[0m  &amp#27;[90m# null&amp#27;[0m
+  &amp#27;[36mWhen &amp#27;[0m&amp#27;[36mi delete 2 hours from the task 204&amp#27;[0m                     &amp#27;[90m# null&amp#27;[0m
+  &amp#27;[36mThen &amp#27;[0m&amp#27;[36mthe resource id 4 has 8 hours assigned to the task 204&amp#27;[0m &amp#27;[90m# null&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="confirm the delete of hours" classname="create update delete or hours to a project" time="0.016">
+    <error message="The step &quot;a resource id 154 with 10 hours worked from a task 154&quot; is undefined. You can implement it using the snippet(s) below:&#10;&#10;@Given(&quot;a resource id {int} with {int} hours worked from a task {int}&quot;)&#10;public void a_resource_id_with_hours_worked_from_a_task(Integer int1, Integer int2, Integer int3) {&#10;    // Write code here that turns the phrase above into concrete actions&#10;    throw new io.cucumber.java.PendingException();&#10;}&#10;&#10;&#10;Some other steps were also undefined:&#10;&#10;@When(&quot;i delete {int} hours from the resource id {int} task {int}&quot;)&#10;public void i_delete_hours_from_the_resource_id_task(Integer int1, Integer int2, Integer int3) {&#10;    // Write code here that turns the phrase above into concrete actions&#10;    throw new io.cucumber.java.PendingException();&#10;}&#10;@Then(&quot;the system ask me to confirm&quot;)&#10;public void the_system_ask_me_to_confirm() {&#10;    // Write code here that turns the phrase above into concrete actions&#10;    throw new io.cucumber.java.PendingException();&#10;}&#10;" type="io.cucumber.junit.UndefinedStepException">io.cucumber.junit.UndefinedStepException: 
+The step "a resource id 154 with 10 hours worked from a task 154" is undefined. You can implement it using the snippet(s) below:
+
+@Given("a resource id {int} with {int} hours worked from a task {int}")
+public void a_resource_id_with_hours_worked_from_a_task(Integer int1, Integer int2, Integer int3) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+
+Some other steps were also undefined:
+
+@When("i delete {int} hours from the resource id {int} task {int}")
+public void i_delete_hours_from_the_resource_id_task(Integer int1, Integer int2, Integer int3) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("the system ask me to confirm")
+public void the_system_ask_me_to_confirm() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+</error>
+    <system-out><![CDATA[
+Scenario: confirm the delete of hours                          &amp#27;[90m# src/test/resources/features/hours.feature:43&amp#27;[0m
+  &amp#27;[33mGiven &amp#27;[0m&amp#27;[33ma resource id 154 with 10 hours worked from a task 154&amp#27;[0m &amp#27;[90m# null&amp#27;[0m
+  &amp#27;[36mWhen &amp#27;[0m&amp#27;[36mi delete 2 hours from the resource id 154 task 154&amp#27;[0m      &amp#27;[90m# null&amp#27;[0m
+  &amp#27;[36mThen &amp#27;[0m&amp#27;[36mthe system ask me to confirm&amp#27;[0m                            &amp#27;[90m# null&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="reading resources from external system" classname="reading resources from external system" time="1.305"/>
+</testsuite>

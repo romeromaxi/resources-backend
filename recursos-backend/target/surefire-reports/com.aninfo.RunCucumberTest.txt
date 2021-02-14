@@ -1,0 +1,213 @@
+-------------------------------------------------------------------------------
+Test set: com.aninfo.RunCucumberTest
+-------------------------------------------------------------------------------
+Tests run: 10, Failures: 0, Errors: 9, Skipped: 0, Time elapsed: 2.343 s <<< FAILURE! - in com.aninfo.RunCucumberTest
+create hours to a resource(create update delete or hours to a project)  Time elapsed: 0.277 s  <<< ERROR!
+io.cucumber.core.exception.CucumberException: 
+Step [a resource id {int} who works {int} hours in the task {int}] is defined with 4 parameters at 'com.aninfo.steps.HoursStepDefinitions.a_resource_id_who_works_hours_in_the_task(java.lang.Integer,java.lang.Integer,java.lang.Integer,java.lang.Integer)'.
+However, the gherkin step has 3 arguments:
+ * 14
+ * 3
+ * 190
+Step text: a resource id 14 who works 3 hours in the task 190
+
+create negative hours to a resource(create update delete or hours to a project)  Time elapsed: 0.01 s  <<< ERROR!
+io.cucumber.junit.UndefinedStepException: 
+The step "a resource id 19 who works the task 150" is undefined. You can implement it using the snippet(s) below:
+
+@Given("a resource id {int} who works the task {int}")
+public void a_resource_id_who_works_the_task(Integer int1, Integer int2) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+
+Some other steps were also undefined:
+
+@When("add {int} hours to the resource id {int}")
+public void add_hours_to_the_resource_id(Integer int1, Integer int2) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("i get invalid number error")
+public void i_get_invalid_number_error() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+
+create zero hours to a resource(create update delete or hours to a project)  Time elapsed: 0.011 s  <<< ERROR!
+io.cucumber.junit.UndefinedStepException: 
+The step "a resource id 19 who works the task 150" is undefined. You can implement it using the snippet(s) below:
+
+@Given("a resource id {int} who works the task {int}")
+public void a_resource_id_who_works_the_task(Integer int1, Integer int2) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+
+Some other steps were also undefined:
+
+@When("add {int} hours to the resource id {int}")
+public void add_hours_to_the_resource_id(Integer int1, Integer int2) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("i get invalid number error")
+public void i_get_invalid_number_error() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+
+create more than 24 hours to a resource(create update delete or hours to a project)  Time elapsed: 0.014 s  <<< ERROR!
+io.cucumber.junit.UndefinedStepException: 
+The step "a resource id 22 who works the task 148" is undefined. You can implement it using the snippet(s) below:
+
+@Given("a resource id {int} who works the task {int}")
+public void a_resource_id_who_works_the_task(Integer int1, Integer int2) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+
+Some other steps were also undefined:
+
+@When("add {int} hours to the resource id {int}")
+public void add_hours_to_the_resource_id(Integer int1, Integer int2) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("i get invalid number error")
+public void i_get_invalid_number_error() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+
+assign a hours worked to a task(create update delete or hours to a project)  Time elapsed: 0.017 s  <<< ERROR!
+io.cucumber.junit.UndefinedStepException: 
+The step "a resource id 15 who works 2 hours in a task 350" is undefined. You can implement it using the snippet(s) below:
+
+@Given("a resource id {int} who works {int} hours in a task {int}")
+public void a_resource_id_who_works_hours_in_a_task(Integer int1, Integer int2, Integer int3) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+
+Some other steps were also undefined:
+
+@When("i assign the hours to the task {int}")
+public void i_assign_the_hours_to_the_task(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("the resource id {int} has {int} hours assigned to a task {int}")
+public void the_resource_id_has_hours_assigned_to_a_task(Integer int1, Integer int2, Integer int3) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+
+update hours from a resource(create update delete or hours to a project)  Time elapsed: 0.027 s  <<< ERROR!
+io.cucumber.junit.UndefinedStepException: 
+The step "a resource id 17 with 3 hours assigned to a task 350" is undefined. You can implement it using the snippet(s) below:
+
+@Given("a resource id {int} with {int} hours assigned to a task {int}")
+public void a_resource_id_with_hours_assigned_to_a_task(Integer int1, Integer int2, Integer int3) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+
+Some other steps were also undefined:
+
+@When("i modify the task {int}")
+public void i_modify_the_task(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("the resource id {int} has {int} hours assigned to the new task {int}")
+public void the_resource_id_has_hours_assigned_to_the_new_task(Integer int1, Integer int2, Integer int3) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+
+update date from the hours of a resource(create update delete or hours to a project)  Time elapsed: 0.026 s  <<< ERROR!
+io.cucumber.junit.UndefinedStepException: 
+The step "a resource id 15 with 4 hours on 20210115 assigned to task 244" is undefined. You can implement it using the snippet(s) below:
+
+@Given("a resource id {int} with {int} hours on {int} assigned to task {int}")
+public void a_resource_id_with_hours_on_assigned_to_task(Integer int1, Integer int2, Integer int3, Integer int4) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+
+Some other steps were also undefined:
+
+@When("i modify the date to {int}")
+public void i_modify_the_date_to(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("the date of the {int} hours assigned to resource ir {int} to task {int} is {int}")
+public void the_date_of_the_hours_assigned_to_resource_ir_to_task_is(Integer int1, Integer int2, Integer int3, Integer int4) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+
+delete hours worked from a task(create update delete or hours to a project)  Time elapsed: 0.014 s  <<< ERROR!
+io.cucumber.junit.UndefinedStepException: 
+The step "a resource id 4 with 10 hours worked from a task 204" is undefined. You can implement it using the snippet(s) below:
+
+@Given("a resource id {int} with {int} hours worked from a task {int}")
+public void a_resource_id_with_hours_worked_from_a_task(Integer int1, Integer int2, Integer int3) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+
+Some other steps were also undefined:
+
+@When("i delete {int} hours from the task {int}")
+public void i_delete_hours_from_the_task(Integer int1, Integer int2) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("the resource id {int} has {int} hours assigned to the task {int}")
+public void the_resource_id_has_hours_assigned_to_the_task(Integer int1, Integer int2, Integer int3) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+
+confirm the delete of hours(create update delete or hours to a project)  Time elapsed: 0.016 s  <<< ERROR!
+io.cucumber.junit.UndefinedStepException: 
+The step "a resource id 154 with 10 hours worked from a task 154" is undefined. You can implement it using the snippet(s) below:
+
+@Given("a resource id {int} with {int} hours worked from a task {int}")
+public void a_resource_id_with_hours_worked_from_a_task(Integer int1, Integer int2, Integer int3) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+
+Some other steps were also undefined:
+
+@When("i delete {int} hours from the resource id {int} task {int}")
+public void i_delete_hours_from_the_resource_id_task(Integer int1, Integer int2, Integer int3) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("the system ask me to confirm")
+public void the_system_ask_me_to_confirm() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+

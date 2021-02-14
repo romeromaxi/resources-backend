@@ -1,3 +1,5 @@
-/home/lautaro/Escritorio/resources-backend/recursos-backend/src/test/java/com/aninfo/recursos/ResourcesIntegrationServiceTest.java
-/home/lautaro/Escritorio/resources-backend/recursos-backend/src/test/java/com/aninfo/recursos/StepDefinitions.java
-/home/lautaro/Escritorio/resources-backend/recursos-backend/src/test/java/com/aninfo/recursos/RunCucumberTest.java
+C:\Users\Pato\Dev\Metodos\TPM2\resources-backend\recursos-backend\src\test\java\com\aninfo\steps\ResourceStepDefinitions.java
+C:\Users\Pato\Dev\Metodos\TPM2\resources-backend\recursos-backend\src\test\java\com\aninfo\steps\HoursStepDefinitions.java
+C:\Users\Pato\Dev\Metodos\TPM2\resources-backend\recursos-backend\src\test\java\com\aninfo\hours\HoursIntegrationServiceTest.java
+C:\Users\Pato\Dev\Metodos\TPM2\resources-backend\recursos-backend\src\test\java\com\aninfo\RunCucumberTest.java
+C:\Users\Pato\Dev\Metodos\TPM2\resources-backend\recursos-backend\src\test\java\com\aninfo\recursos\ResourcesIntegrationServiceTest.java
