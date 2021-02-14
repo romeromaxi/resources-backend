@@ -2,12 +2,9 @@ package com.aninfo.hours.repository;
 
 import com.aninfo.hours.model.Hours;
 
-import java.util.Vector;
+import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 
-import org.springframework.http.HttpMethod;
-import org.springframework.web.client.RestTemplate;
-import org.springframework.http.ResponseEntity;
-import org.springframework.core.ParameterizedTypeReference;
-
-public class HoursRepository {
+@RepositoryRestResource
+public interface HoursRepository extends CrudRepository<Hours, Long> {
 }

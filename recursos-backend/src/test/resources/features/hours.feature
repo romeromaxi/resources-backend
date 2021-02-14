@@ -1,9 +1,9 @@
 Feature: create update delete or hours to a project
 
   Scenario: create hours to a resource
-    Given a resource id 14 who works in the task 190
-    When create 3 hours to the resource id 14
-    Then the resource id 14 has 3 hours assigned
+    Given a resource id 14 who works 3 hours in the task 190
+    When save the hours
+    Then the resource id 14 has 3 hours assigned in the task 190
 
   Scenario: create negative hours to a resource
     Given a resource id 19 who works the task 150
