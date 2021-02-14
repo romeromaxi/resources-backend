@@ -6,18 +6,18 @@ Feature: create update delete or hours to a project
     Then the resource id 14 has 3 hours assigned in the task 190
 
   Scenario: create negative hours to a resource
-    Given a resource id 19 who works -3 hours in the task 150
-    When save the hours
+    Given loading -3 hours to the resource with id 19 in the task 150
+    When trying to save the hours
     Then i get invalid number error
 
   Scenario: create zero hours to a resource
-    Given a resource id 19 who works 0 hours the task 150
-    When save the hours
+    Given loading 0 hours to the resource with id 19 in the task 150
+    When trying to save the hours
     Then i get invalid number error
 
   Scenario: create more than 24 hours to a resource
-    Given a resource id 22 who works the task 148
-    When add 25 hours to the resource id 22
+    Given loading 25 hours to the resource with id 19 in the task 150
+    When trying to save the hours
     Then i get invalid number error
 
   Scenario: assign a hours worked to a task

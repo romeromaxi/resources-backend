@@ -1,5 +1,6 @@
 package com.aninfo.hours.service;
 
+import com.aninfo.hours.exceptions.InvalidHoursException;
 import com.aninfo.hours.model.Hours;
 import com.aninfo.hours.repository.HoursRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,6 +16,9 @@ public class HoursService {
     private HoursRepository hoursRepository;
 
     public Hours saveHours(Hours hours) {
+        if(hours.getQuantityHours() > 24 || hours.getQuantityHours() <= 0)
+            throw new InvalidHoursException("Hours loaded must be between 1 and 24");
+
         return hoursRepository.save(hours);
     }
 
