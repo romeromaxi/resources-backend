@@ -12,12 +12,14 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 
+import java.util.Collection;
 import java.util.Vector;
 
 @RestController
-@SpringBootApplication(exclude = {DataSourceAutoConfiguration.class })  //puede generar quilombo...
-public class MainApp {
+@SpringBootApplication
+public class MainApp extends SpringBootServletInitializer {
     private ResourceService resourceService = new ResourceService();
 
     @Autowired
@@ -36,5 +38,10 @@ public class MainApp {
     @ResponseStatus(HttpStatus.CREATED)
     public Hours createAccount(@RequestBody Hours hours) {
         return hoursService.saveHours(hours);
+    }
+
+    @GetMapping("/hours")
+    public Collection<Hours> getHours(){
+        return hoursService.getHours();
     }
 }

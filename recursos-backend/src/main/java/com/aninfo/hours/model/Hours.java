@@ -30,4 +30,12 @@ public class Hours {
     public Integer getQuantityHours(){
         return this.quantityHours;
     }
+
+    public Integer getFile(){
+        return this.file;
+    }
+
+    public Integer getIdTask(){
+        return this.idTask;
+    }
 }

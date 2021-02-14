@@ -3,8 +3,8 @@ package com.aninfo.hours.repository;
 import com.aninfo.hours.model.Hours;
 
 import org.springframework.data.repository.CrudRepository;
-import org.springframework.data.rest.core.annotation.RepositoryRestResource;
+import org.springframework.stereotype.Repository;
 
-@RepositoryRestResource
+@Repository
 public interface HoursRepository extends CrudRepository<Hours, Long> {
 }
