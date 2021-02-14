@@ -20,11 +20,6 @@ Feature: create update delete or hours to a project
     When trying to save the hours
     Then i get invalid number error
 
-  Scenario: assign a hours worked to a task
-    Given a resource id 15 who works 2 hours in a task 350
-    When i assign the hours to the task 350
-    Then the resource id 15 has 2 hours assigned to a task 350
-
   Scenario: update hours from a resource
     Given a resource id 17 with 3 hours assigned to a task 350
     When i modify the task 350
@@ -40,7 +35,7 @@ Feature: create update delete or hours to a project
     When i delete 2 hours from the task 204
     Then the resource id 4 has 8 hours assigned to the task 204
 
-  Scenario: confirm the delete of hours
-    Given a resource id 154 with 10 hours worked from a task 154
-    When i delete 2 hours from the resource id 154 task 154
-    Then the system ask me to confirm
+  #Scenario: confirm the delete of hours
+  #  Given a resource id 154 with 10 hours worked from a task 154
+  #  When i delete 2 hours from the resource id 154 task 154
+  #  Then the system ask me to confirm
