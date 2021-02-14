@@ -2,15 +2,14 @@ package com.aninfo.steps;
 
 import com.aninfo.hours.HoursIntegrationServiceTest;
 import com.aninfo.hours.model.Hours;
-import com.aninfo.recursos.ResourcesIntegrationServiceTest;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
 import io.cucumber.java.en.Then;
-
-import java.util.Vector;
+import org.springframework.boot.test.context.SpringBootTest;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+@SpringBootTest
 public class HoursStepDefinitions extends HoursIntegrationServiceTest {
 
     private Hours hours;
