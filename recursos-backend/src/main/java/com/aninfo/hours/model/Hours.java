@@ -14,6 +14,7 @@ public class Hours {
     private Integer idTask;
     private Integer quantityHours;
     private Integer date;
+    private Integer loadingDate;
 
     public Hours() {
     }
@@ -54,6 +55,10 @@ public class Hours {
     public void setDate(Integer newDate) {
         this.date = newDate;
     }
+
+    public Integer getLoadingDate() { return this.loadingDate; }
+
+    public void setLoadingDate(Integer loadingDate) { this.loadingDate = loadingDate; }
 
     public void setTask(Integer newIdTask) {
         this.idTask = newIdTask;

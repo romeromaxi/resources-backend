@@ -27,4 +27,6 @@ public class HoursIntegrationServiceTest {
         return hoursService.saveHours(hours);
     }
 
+    public Hours changeHours(Long id, Integer newQuantHours) { return hoursService.changeHours(id, newQuantHours);}
+
 }

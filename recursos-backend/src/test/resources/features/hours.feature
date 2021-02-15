@@ -30,10 +30,15 @@ Feature: create update delete or hours to a project
     When i modify the date to 20210114
     Then the date of the 4 hours assigned to resource id 15 to task 244 is 20210114
 
-  Scenario: delete hours worked from a task
-     Given a resource id 4 with 10 hours on 20210115 assigned to task 244
-     When i delete 2 hours from the task 244
-     Then the resource id 4 has 8 hours assigned to the task 244
+  Scenario: update hours worked from a task
+    Given a resource id 4 with 10 hours loaded on 20210115 from a task 244
+    When i modify the quantity of worked hours to 5
+    Then the resource id 4 has 5 hours assigned in the task 244
+
+  Scenario: create hours to a resource saves loading date
+    Given a resource id 14 who works 3 hours in the task 190
+    When save the hours
+    Then the loading date is today
 
   #Scenario: confirm the delete of hours
   #  Given a resource id 154 with 10 hours worked from a task 154

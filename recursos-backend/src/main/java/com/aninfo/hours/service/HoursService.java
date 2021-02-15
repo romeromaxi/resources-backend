@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.PathVariable;
 
 import javax.transaction.Transactional;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Optional;
@@ -21,7 +22,9 @@ public class HoursService {
     public Hours saveHours(Hours hours) {
         if(hours.getQuantityHours() > 24 || hours.getQuantityHours() <= 0)
             throw new InvalidHoursException("Hours loaded must be between 1 and 24");
-
+        LocalDate today = LocalDate.now();
+        int todayInt = today.getYear() * 10000 + today.getMonthValue() * 100 + today.getDayOfMonth();
+        hours.setLoadingDate(todayInt);
         return hoursRepository.save(hours);
     }
 
@@ -40,14 +43,14 @@ public class HoursService {
     }
 
     @Transactional
-    public Hours changeHours(Long id, Integer hoursToChange) {
+    public Hours changeHours(Long id, Integer newQuantHours) {
         Hours hours = hoursRepository.findHoursById(id);
 
-        if (hoursToChange + hours.getQuantityHours() > 24 || hoursToChange + hours.getQuantityHours() < 1){
+        if (newQuantHours > 24 || newQuantHours < 1){
             throw new InvalidHoursException("Hours loaded must be between 1 and 24");
         }
 
-        hours.setQuantityHours(hours.getQuantityHours() + hoursToChange);
+        hours.setQuantityHours(newQuantHours);
         hoursRepository.save(hours);
 
         return hours;

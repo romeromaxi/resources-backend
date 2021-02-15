@@ -8,6 +8,9 @@ import io.cucumber.java.en.When;
 import io.cucumber.java.en.Then;
 import org.springframework.boot.test.context.SpringBootTest;
 
+import java.time.LocalDate;
+import java.util.function.IntToLongFunction;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
@@ -78,25 +81,21 @@ public class HoursStepDefinitions extends HoursIntegrationServiceTest {
         assertEquals(idTask, hours.getIdTask());
     }
 
-    @Given("a resource id {int} with {int} hours worked from a task {int}")
-    public void a_resource_id_with_hours_worked_from_a_task(Integer int1, Integer int2, Integer int3) {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+    @Given("a resource id {int} with {int} hours loaded on {int} from a task {int}")
+    public void a_resource_id_with_hours_loaded_from_a_task(Integer file, Integer quantHours, Integer date, Integer idTask) {
+        hours = createHours(file, quantHours, idTask, date);
+        hours = saveHours(hours);
     }
 
-    Some other steps were also undefined:
-
-    @When("i delete {int} hours from the task {int}")
-    public void i_delete_hours_from_the_task(Integer int1, Integer int2) {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
-    }
-    @Then("the resource id {int} has {int} hours assigned to the task {int}")
-    public void the_resource_id_has_hours_assigned_to_the_task(Integer int1, Integer int2, Integer int3) {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+    @When("i modify the quantity of worked hours to {int}")
+    public void i_modify_the_quantity_of_worked_hours_to(Integer newQuantHours) {
+        hours = changeHours(hours.getId(), newQuantHours);
     }
 
-
-
+    @Then("the loading date is today")
+    public void the_loading_date_is_today() {
+        LocalDate today = LocalDate.now();
+        int todayInt = today.getYear() * 10000 + today.getMonthValue() * 100 + today.getDayOfMonth();
+        assertEquals(todayInt, hours.getLoadingDate());
+    }
 }
