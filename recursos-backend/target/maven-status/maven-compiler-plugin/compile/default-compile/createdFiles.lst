@@ -1,4 +1,1 @@
-com\aninfo\recursos\model\Resource.class
-com\aninfo\recursos\repository\ResourceRepository$1.class
-com\aninfo\recursos\repository\ResourceRepository.class
-com\aninfo\recursos\service\ResourceService.class
+com/aninfo/hours/exceptions/InvalidHoursException.class

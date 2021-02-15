@@ -1,3 +1,5 @@
-com/aninfo/recursos/RunCucumberTest.class
-com/aninfo/recursos/StepDefinitions.class
+com/aninfo/steps/ResourceStepDefinitions.class
+com/aninfo/RunCucumberTest.class
+com/aninfo/steps/HoursStepDefinitions.class
+com/aninfo/hours/HoursIntegrationServiceTest.class
 com/aninfo/recursos/ResourcesIntegrationServiceTest.class
