@@ -1,4 +1,8 @@
-/home/lautaro/Escritorio/resources-backend/recursos-backend/src/main/java/com/aninfo/recursos/repository/ResourceRepository.java
-/home/lautaro/Escritorio/resources-backend/recursos-backend/src/main/java/com/aninfo/recursos/service/ResourceService.java
-/home/lautaro/Escritorio/resources-backend/recursos-backend/src/main/java/com/aninfo/recursos/model/Resource.java
-/home/lautaro/Escritorio/resources-backend/recursos-backend/src/main/java/com/aninfo/recursos/DemoApplication.java
+/mnt/1A18F327B02E58D9/1. Memo I/Repo TP/resources-backend/recursos-backend/src/main/java/com/aninfo/hours/service/HoursService.java
+/mnt/1A18F327B02E58D9/1. Memo I/Repo TP/resources-backend/recursos-backend/src/main/java/com/aninfo/recursos/model/Resource.java
+/mnt/1A18F327B02E58D9/1. Memo I/Repo TP/resources-backend/recursos-backend/src/main/java/com/aninfo/recursos/service/ResourceService.java
+/mnt/1A18F327B02E58D9/1. Memo I/Repo TP/resources-backend/recursos-backend/src/main/java/com/aninfo/recursos/repository/ResourceRepository.java
+/mnt/1A18F327B02E58D9/1. Memo I/Repo TP/resources-backend/recursos-backend/src/main/java/com/aninfo/hours/exceptions/InvalidHoursException.java
+/mnt/1A18F327B02E58D9/1. Memo I/Repo TP/resources-backend/recursos-backend/src/main/java/com/aninfo/MainApp.java
+/mnt/1A18F327B02E58D9/1. Memo I/Repo TP/resources-backend/recursos-backend/src/main/java/com/aninfo/hours/model/Hours.java
+/mnt/1A18F327B02E58D9/1. Memo I/Repo TP/resources-backend/recursos-backend/src/main/java/com/aninfo/hours/repository/HoursRepository.java

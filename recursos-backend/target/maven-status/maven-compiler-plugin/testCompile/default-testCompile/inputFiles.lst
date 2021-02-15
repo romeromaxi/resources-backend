@@ -1,3 +1,5 @@
-/home/lautaro/Escritorio/resources-backend/recursos-backend/src/test/java/com/aninfo/recursos/ResourcesIntegrationServiceTest.java
-/home/lautaro/Escritorio/resources-backend/recursos-backend/src/test/java/com/aninfo/recursos/StepDefinitions.java
-/home/lautaro/Escritorio/resources-backend/recursos-backend/src/test/java/com/aninfo/recursos/RunCucumberTest.java
+/mnt/1A18F327B02E58D9/1. Memo I/Repo TP/resources-backend/recursos-backend/src/test/java/com/aninfo/steps/HoursStepDefinitions.java
+/mnt/1A18F327B02E58D9/1. Memo I/Repo TP/resources-backend/recursos-backend/src/test/java/com/aninfo/RunCucumberTest.java
+/mnt/1A18F327B02E58D9/1. Memo I/Repo TP/resources-backend/recursos-backend/src/test/java/com/aninfo/hours/HoursIntegrationServiceTest.java
+/mnt/1A18F327B02E58D9/1. Memo I/Repo TP/resources-backend/recursos-backend/src/test/java/com/aninfo/recursos/ResourcesIntegrationServiceTest.java
+/mnt/1A18F327B02E58D9/1. Memo I/Repo TP/resources-backend/recursos-backend/src/test/java/com/aninfo/steps/ResourceStepDefinitions.java
