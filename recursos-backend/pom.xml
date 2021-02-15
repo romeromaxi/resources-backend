@@ -20,7 +20,7 @@
         <cucumber.version>6.9.1</cucumber.version>
         <maven.compiler.version>3.8.1</maven.compiler.version>
         <maven.surefire.version>2.22.2</maven.surefire.version>
-        <spring.cloud-version>Hoxton.SR8</spring.cloud-version>
+        <spring-cloud.version>Hoxton.SR8</spring.cloud-version>
     </properties>
          
     <dependencies>
@@ -63,7 +63,7 @@
         <dependency>
              <groupId>org.springframework.cloud</groupId>
              <artifactId>spring-cloud-dependencies</artifactId>
-             <version>${}</version>
+             <version>${spring-cloud.version}</version>
              <type>pom</type>
              <scope>import</scope>
         </dependency>
