@@ -13,6 +13,7 @@ import java.util.function.IntToLongFunction;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
+import java.util.Optional;
 
 @SpringBootTest
 public class HoursStepDefinitions extends HoursIntegrationServiceTest {
@@ -97,5 +98,16 @@ public class HoursStepDefinitions extends HoursIntegrationServiceTest {
         LocalDate today = LocalDate.now();
         int todayInt = today.getYear() * 10000 + today.getMonthValue() * 100 + today.getDayOfMonth();
         assertEquals(todayInt, hours.getLoadingDate());
+    }
+
+    @When("delete the hours")
+    public void delete_the_hours() {
+        deleteById(hours.getId());
+    }
+
+    @Then("hours have been deleted")
+    public void hours_have_been_deleted() {
+        Optional<Hours> oneHours = findById(hours.getId());
+        assertEquals(oneHours.isPresent(), false);
     }
 }

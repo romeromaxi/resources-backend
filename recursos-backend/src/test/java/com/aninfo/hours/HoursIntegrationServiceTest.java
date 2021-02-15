@@ -11,6 +11,8 @@ import org.springframework.context.annotation.Scope;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.web.WebAppConfiguration;
 
+import java.util.Optional;
+
 @ContextConfiguration(classes = MainApp.class)
 @CucumberContextConfiguration
 @SpringBootTest
@@ -29,4 +31,11 @@ public class HoursIntegrationServiceTest {
 
     public Hours changeHours(Long id, Integer newQuantHours) { return hoursService.changeHours(id, newQuantHours);}
 
+    public void deleteById(Long id){
+        hoursService.deleteById(id);
+    }
+
+    public Optional<Hours> findById(Long idHours) {
+        return hoursService.findById(idHours);
+    }
 }

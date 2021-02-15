@@ -40,6 +40,11 @@ Feature: create update delete or hours to a project
     When save the hours
     Then the loading date is today
 
+  Scenario: delete hours
+    Given a resource id 4 with 10 hours loaded on 20210115 from a task 244
+    When delete the hours
+    Then hours have been deleted
+
   #Scenario: confirm the delete of hours
   #  Given a resource id 154 with 10 hours worked from a task 154
   #  When i delete 2 hours from the resource id 154 task 154
