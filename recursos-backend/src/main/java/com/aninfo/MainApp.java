@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 
 import java.util.Collection;
+import java.util.Collections;
 import java.util.Vector;
 import java.util.Optional;
 
@@ -28,7 +29,10 @@ public class MainApp extends SpringBootServletInitializer {
     private HoursService hoursService;
 
     public static void main(String[] args) {
-        SpringApplication.run(MainApp.class, args);
+        SpringApplication app = new SpringApplication(MainApp.class);
+        app.setDefaultProperties(Collections
+                .singletonMap("server.port", "8080"));
+        app.run(args);
     }
 
     @GetMapping("/resources")
