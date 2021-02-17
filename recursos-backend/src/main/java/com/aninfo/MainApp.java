@@ -71,19 +71,18 @@ public class MainApp extends SpringBootServletInitializer {
         return ResponseEntity.noContent().build();
     }
 
-
-    @PutMapping("/hours/{id}/changeHours")
-    public Hours changeHours(@PathVariable Long id, @RequestParam Integer hoursToChange) {
+    @PatchMapping("/hours/{id}/changeHours")
+    public Hours changeHours(@RequestBody Integer hoursToChange, @PathVariable Long id) {
         return hoursService.changeHours(id, hoursToChange);
     }
 
-    @PutMapping("/hours/{id}/changeDate")
-    public Hours changeDate(@PathVariable Long id, @RequestParam Integer newDate){
+    @PatchMapping("/hours/{id}/changeDate")
+    public Hours changeDate(@RequestBody Integer newDate, @PathVariable Long id){
         return hoursService.changeDate(id, newDate);
     }
 
-    @PutMapping("/hours/{id}/changeIdTask")
-    public Hours changeTask(@PathVariable Long id, @RequestParam Integer newIdTask){
+    @PatchMapping("/hours/{id}/changeIdTask")
+    public Hours changeTask(@RequestBody Integer newIdTask, @PathVariable Long id){
         return hoursService.changeTask(id, newIdTask);
     }
 
