@@ -54,6 +54,7 @@ public class MainApp extends SpringBootServletInitializer {
     }
 
     @DeleteMapping("/hours/{id}")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
     public void deleteHours(@PathVariable Long id) {
         hoursService.deleteById(id);
     }
