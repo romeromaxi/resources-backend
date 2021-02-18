@@ -5,23 +5,23 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Resource {
 
     @JsonProperty("Nombre")
-    private String nombre;
+    private String name;
     @JsonProperty("Apellido")
-    private String apellido;
+    private String surname;
     @JsonProperty("legajo")
-    private int legajo;
+    private int file;
 
     public Resource(){}
 
-    public String getNombre(){
-            return nombre;
+    public String getName(){
+            return name;
     }
 
-    public String getApellido(){
-        return apellido;
+    public String getSurname(){
+        return surname;
     }
 
-    public int getLegajo(){
-        return legajo;
+    public int getFile(){
+        return file;
     }
 }

@@ -10,7 +10,9 @@ public class ResourcesIntegrationServiceTest {
 
     private ResourceService resourceService = new ResourceService();
 
-    public Vector<Resource> readFromExternalSystem(){
-        return resourceService.readFromExternalSystem();
+    public Vector<Resource> readAllFromExternalSystem(){
+        return resourceService.readAllFromExternalSystem();
     }
+
+    public Resource readOneFromExternalSystem(int file) {return resourceService.readOneFromExternalSystem(file); }
 }

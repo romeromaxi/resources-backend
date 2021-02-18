@@ -12,6 +12,7 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.web.WebAppConfiguration;
 
 import java.util.Optional;
+import java.util.Collection;
 
 @ContextConfiguration(classes = MainApp.class)
 @CucumberContextConfiguration
@@ -37,5 +38,9 @@ public class HoursIntegrationServiceTest {
 
     public Optional<Hours> findById(Long idHours) {
         return hoursService.findById(idHours);
+    }
+
+    public Collection<Hours> findByFile(Integer file) {
+        return hoursService.findByFile(file);
     }
 }

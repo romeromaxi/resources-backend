@@ -45,6 +45,12 @@ Feature: create update delete or hours to a project
     When delete the hours
     Then hours have been deleted
 
+  Scenario: return hours of a resource
+    Given a resource with id 1 with two hours loaded to different tasks and dates
+    When recovering the hours from the resource with id 1
+    Then i get a list of 2 elements
+    And they are both associated to the resource with id 1
+
   #Scenario: confirm the delete of hours
   #  Given a resource id 154 with 10 hours worked from a task 154
   #  When i delete 2 hours from the resource id 154 task 154

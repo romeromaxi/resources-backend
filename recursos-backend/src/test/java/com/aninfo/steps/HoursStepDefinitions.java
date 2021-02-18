@@ -9,16 +9,19 @@ import io.cucumber.java.en.Then;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import java.time.LocalDate;
+import java.util.Collection;
+import java.util.Iterator;
 import java.util.function.IntToLongFunction;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNotNull;
 import java.util.Optional;
+
+import static org.junit.jupiter.api.Assertions.*;
 
 @SpringBootTest
 public class HoursStepDefinitions extends HoursIntegrationServiceTest {
 
-    private Hours hours;
+    private Hours hours, hours1, hours2;
+    private Collection<Hours> hoursList;
     private InvalidHoursException ihe;
 
     @Given("a resource id {int} who works {int} hours in the task {int}")
@@ -109,5 +112,34 @@ public class HoursStepDefinitions extends HoursIntegrationServiceTest {
     public void hours_have_been_deleted() {
         Optional<Hours> oneHours = findById(hours.getId());
         assertEquals(oneHours.isPresent(), false);
+    }
+
+    @Given("a resource with id {int} with two hours loaded to different tasks and dates")
+    public void a_resource_with_id_with_two_hours_loaded_to_different_tasks_and_dates(Integer file) {
+        hours1 = createHours(file, 4, 10, 20210214);
+        hours2 = createHours(file, 4, 20, 20210215);
+
+        saveHours(hours1);
+        saveHours(hours2);
+
+        assertNotEquals(hours1.getDate(), hours2.getDate());
+        assertNotEquals(hours1.getIdTask(), hours2.getIdTask());
+    }
+
+    @When("recovering the hours from the resource with id {int}")
+    public void recovering_the_hours(Integer file) {
+        hoursList = findByFile(file);
+    }
+
+    @Then("i get a list of {int} elements")
+    public void i_get_a_list_of_elements(Integer loadedHours) {
+        assertEquals(loadedHours, hoursList.size());
+    }
+
+    @Then("they are both associated to the resource with id {int}")
+    public void they_are_both_associated_to_the_resource_with_id(Integer file) {
+        Iterator<Hours> it = hoursList.iterator();
+        assertEquals(it.next().getFile(), file);
+        assertEquals(it.next().getFile(), file);
     }
 }

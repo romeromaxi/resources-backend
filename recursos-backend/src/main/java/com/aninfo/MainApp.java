@@ -1,5 +1,7 @@
 package com.aninfo;
 
+import com.aninfo.hours.exceptions.NoLoadedHoursException;
+import com.aninfo.recursos.exceptions.ResourceNotFoundException;
 import com.aninfo.recursos.model.Resource;
 import com.aninfo.recursos.service.ResourceService;
 
@@ -36,8 +38,19 @@ public class MainApp extends SpringBootServletInitializer {
     }
 
     @GetMapping("/resources")
-    public Vector<Resource> readFromExternalSystem() {
-        return resourceService.readFromExternalSystem();
+    public Vector<Resource> readAllFromExternalSystem() {
+        return resourceService.readAllFromExternalSystem();
+    }
+
+    @GetMapping("/resources/{file}")
+    public ResponseEntity<Resource> readOneFromExternalSystem(@PathVariable int file) {
+        try{
+            Resource resource = resourceService.readOneFromExternalSystem(file);
+            return ResponseEntity.ok(resource);
+        } catch (ResourceNotFoundException rnfe){
+            return ResponseEntity.notFound().build();
+        }
+
     }
 
     @PostMapping("/hours")
@@ -55,6 +68,16 @@ public class MainApp extends SpringBootServletInitializer {
     public ResponseEntity<Hours> getHours(@PathVariable long id){
         Optional<Hours> hoursOptional = hoursService.findById(id);
         return ResponseEntity.of(hoursOptional);
+    }
+
+    @GetMapping("/hoursFile/{file}")
+    public ResponseEntity<Collection<Hours>> getHoursByFile(@PathVariable Integer file){
+        try{
+            Collection<Hours> hoursList = hoursService.findByFile(file);
+            return ResponseEntity.ok(hoursList);
+        } catch (NoLoadedHoursException nlhe){
+            return ResponseEntity.notFound().build();
+        }
     }
 
     @DeleteMapping("/hours/{id}")
