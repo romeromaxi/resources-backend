@@ -94,6 +94,10 @@ public class HoursService {
             throw new InvalidMinutesException("Minutes loaded must be between 0 and 59");
         }
 
+        if ((hours.getQuantityMinutes() + newQuantMinutes >= 60) && (hours.getQuantityHours() == 23)){
+            throw new InvalidHoursException("Hours loaded exceed 24");
+        }
+
         if ((hours.getQuantityMinutes() + newQuantMinutes) >= 60){
             hours.setQuantityHours(hours.getQuantityHours() + 1);
             hours.setQuantityMinutes(hours.getQuantityMinutes() + newQuantMinutes - 60);
