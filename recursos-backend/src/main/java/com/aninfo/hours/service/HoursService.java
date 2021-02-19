@@ -1,6 +1,7 @@
 package com.aninfo.hours.service;
 
 import com.aninfo.hours.exceptions.InvalidHoursException;
+import com.aninfo.hours.exceptions.InvalidMinutesException;
 import com.aninfo.hours.exceptions.NoLoadedHoursException;
 import com.aninfo.hours.model.Hours;
 import com.aninfo.hours.repository.HoursRepository;
@@ -89,8 +90,8 @@ public class HoursService {
     public Hours changeMinutes(Long id, Integer newQuantMinutes) {
         Hours hours = hoursRepository.findHoursById(id);
 
-        if (newQuantMinutes>59 || newQuantMinutes<0){
-            throw new InvalidHoursException("Minutes loaded must be between 0 and 59");
+        if (newQuantMinutes > 59 || newQuantMinutes < 0){
+            throw new InvalidMinutesException("Minutes loaded must be between 0 and 59");
         }
 
         if ((hours.getQuantityMinutes() + newQuantMinutes) > 59){
