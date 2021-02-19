@@ -32,7 +32,7 @@ public class HoursIntegrationServiceTest {
 
     public Hours changeHours(Long id, Integer newQuantHours) { return hoursService.changeHours(id, newQuantHours);}
 
-    public Hours changeMinutes(Long id, Integer newQuantMinutes) { return hoursService.changeHours(id, newQuantMinutes);}
+    public Hours changeMinutes(Long id, Integer newQuantMinutes) { return hoursService.changeMinutes(id, newQuantMinutes);}
 
 
     public void deleteById(Long id){

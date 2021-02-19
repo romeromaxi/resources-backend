@@ -10,12 +10,12 @@ Feature: create update delete or hours to a project
     When trying to save the hours
     Then i get invalid number error
 
-  Scenario: add minutes and exceed the hour
+  Scenario: add minutes and exceed the hour then add one to hour
     Given a resource id 14 who works 3 hours and 45 minutes in the task 190
     When add 30 minutes
     Then the resource id 14 has 4 hours assigned in the task 190
 
-  Scenario: add minutes and exceed the hour
+  Scenario: add minutes and exceed the hour then start the new minute counter
     Given a resource id 14 who works 3 hours and 45 minutes in the task 190
     When add 30 minutes
     Then the resource id 14 has 15 minutes assigned in the task 190

@@ -1,6 +1,7 @@
 package com.aninfo.steps;
 
 import com.aninfo.hours.HoursIntegrationServiceTest;
+import com.aninfo.hours.exceptions.InvalidMinutesException;
 import com.aninfo.hours.model.Hours;
 import com.aninfo.hours.exceptions.InvalidHoursException;
 import io.cucumber.java.en.Given;
@@ -40,15 +41,19 @@ public class HoursStepDefinitions extends HoursIntegrationServiceTest {
     }
 
     @Given("a resource id {int} who works {int} hours and {int} minutes in the task {int}")
-    public void a_resource_id_who_works_hours_and_minutes_in_the_task(Integer file, Integer quantHours, Integer minutes, Integer idTask) {
-        hours = createHours(file,quantHours,minutes,idTask,20200215);
+    public void a_resource_id_who_works_hours_and_minutes_in_the_task(Integer file, Integer quantHours, Integer quanMinutes, Integer idTask) {
+        hours = createHours(file, quantHours, quanMinutes, idTask, 20200215);
         hours = saveHours(hours);
     }
-
 
     @When("add {int} minutes")
     public void add_minutes(Integer minutesToChange) {
         hours = changeMinutes(hours.getId(), minutesToChange);
+    }
+
+    @Then("the resource id {int} has {int} minutes assigned in the task {int}")
+    public void the_resource_id_has_minutes_assigned_in_the_task(Integer file, Integer quanMinutes, Integer idTask) {
+        assertEquals(quanMinutes, hours.getQuantityMinutes());
     }
 
     @Given("loading {int} hours to the resource with id {int} in the task {int}")

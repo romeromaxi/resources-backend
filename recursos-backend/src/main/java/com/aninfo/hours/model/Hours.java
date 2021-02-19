@@ -13,18 +13,18 @@ public class Hours {
     private Integer file;
     private Integer idTask;
     private Integer quantityHours;
-    private Integer minutes;
+    private Integer quantityMinutes;
     private Integer date;
     private Integer loadingDate;
 
     public Hours() {
     }
 
-    public Hours(Integer file, Integer idTask, Integer quantityHours, Integer minutes, Integer date) {
+    public Hours(Integer file, Integer idTask, Integer quantityHours, Integer quantityMinutes, Integer date) {
         this.file = file;
         this.idTask = idTask;
         this.quantityHours = quantityHours;
-        this.minutes = minutes;
+        this.quantityMinutes = quantityMinutes;
         this.date = date;
     }
 
@@ -37,7 +37,7 @@ public class Hours {
     }
 
     public Integer getQuantityMinutes(){
-        return this.minutes;
+        return this.quantityMinutes;
     }
 
 
@@ -60,7 +60,7 @@ public class Hours {
     }
 
     public void setQuantityMinutes(Integer minutesToChange){
-        this.minutes = minutesToChange;
+        this.quantityMinutes = minutesToChange;
     }
 
     public void setDate(Integer newDate) {
