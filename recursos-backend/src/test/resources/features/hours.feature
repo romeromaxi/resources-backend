@@ -13,7 +13,7 @@ Feature: create update delete or hours to a project
   Scenario: add minutes and exceed the hour
     Given a resource id 14 who works 3 hours and 45 minutes in the task 190
     When add 30 minutes
-    Then the resource id 14 has 3 hours assigned in the task 190
+    Then the resource id 14 has 4 hours assigned in the task 190
 
   Scenario: add minutes and exceed the hour
     Given a resource id 14 who works 3 hours and 45 minutes in the task 190
