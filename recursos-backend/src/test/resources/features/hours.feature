@@ -10,6 +10,16 @@ Feature: create update delete or hours to a project
     When trying to save the hours
     Then i get invalid number error
 
+  Scenario: add minutes and exceed the hour
+    Given a resource id 14 who works 3 hours and 45 minutes in the task 190
+    When add 30 minutes
+    Then the resource id 14 has 3 hours assigned in the task 190
+
+  Scenario: add minutes and exceed the hour
+    Given a resource id 14 who works 3 hours and 45 minutes in the task 190
+    When add 30 minutes
+    Then the resource id 14 has 15 minutes assigned in the task 190
+
   Scenario: create zero hours to a resource
     Given loading 0 hours to the resource with id 19 in the task 150
     When trying to save the hours

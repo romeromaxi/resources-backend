@@ -104,6 +104,11 @@ public class MainApp extends SpringBootServletInitializer {
         return hoursService.changeHours(id, hoursToChange);
     }
 
+    @PatchMapping("/hours/{id}/changeMinutes")
+    public Hours changeMinutes(@RequestBody Integer minutesToChange, @PathVariable Long id) {
+        return hoursService.changeMinutes(id, minutesToChange);
+    }
+
     @PatchMapping("/hours/{id}/changeDate")
     public Hours changeDate(@RequestBody Integer newDate, @PathVariable Long id){
         return hoursService.changeDate(id, newDate);

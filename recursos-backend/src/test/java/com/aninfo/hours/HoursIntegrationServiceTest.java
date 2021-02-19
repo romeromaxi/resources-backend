@@ -22,8 +22,8 @@ public class HoursIntegrationServiceTest {
     @Autowired
     private HoursService hoursService;
 
-    public Hours createHours(Integer file, Integer quantHours, Integer idTask, Integer date){
-        return new Hours(file, idTask, quantHours, date);
+    public Hours createHours(Integer file, Integer quantHours, Integer minutes, Integer idTask, Integer date){
+        return new Hours(file, idTask, quantHours, minutes, date);
     }
 
     public Hours saveHours(Hours hours){
@@ -31,6 +31,9 @@ public class HoursIntegrationServiceTest {
     }
 
     public Hours changeHours(Long id, Integer newQuantHours) { return hoursService.changeHours(id, newQuantHours);}
+
+    public Hours changeMinutes(Long id, Integer newQuantMinutes) { return hoursService.changeHours(id, newQuantMinutes);}
+
 
     public void deleteById(Long id){
         hoursService.deleteById(id);

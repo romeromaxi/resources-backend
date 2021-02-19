@@ -26,7 +26,7 @@ public class HoursStepDefinitions extends HoursIntegrationServiceTest {
 
     @Given("a resource id {int} who works {int} hours in the task {int}")
     public void a_resource_id_who_works_hours_in_the_task(Integer file, Integer quantHours, Integer idTask) {
-        hours = createHours(file, quantHours, idTask, 20210214);
+        hours = createHours(file,quantHours, 15,idTask,20201005);
     }
 
     @When("save the hours")
@@ -39,9 +39,21 @@ public class HoursStepDefinitions extends HoursIntegrationServiceTest {
         assertEquals(quantHours, hours.getQuantityHours());
     }
 
+    @Given("a resource id {int} who works {int} hours and {int} minutes in the task {int}")
+    public void a_resource_id_who_works_hours_and_minutes_in_the_task(Integer file, Integer quantHours, Integer minutes, Integer idTask) {
+        hours = createHours(file,quantHours,minutes,idTask,20200215);
+        hours = saveHours(hours);
+    }
+
+
+    @When("add {int} minutes")
+    public void add_minutes(Integer minutesToChange) {
+        hours = changeMinutes(hours.getId(), minutesToChange);
+    }
+
     @Given("loading {int} hours to the resource with id {int} in the task {int}")
     public void loading_hours_to_the_resource_with_id_in_the_task(Integer quantHours, Integer file, Integer idTask) {
-        hours = createHours(file, quantHours, idTask, 20210214);
+        hours = createHours(file, quantHours, 15, idTask, 20210214);
     }
 
     @When("trying to save the hours")
@@ -72,7 +84,7 @@ public class HoursStepDefinitions extends HoursIntegrationServiceTest {
 
     @Given("a resource id {int} with {int} hours on {int} assigned to task {int}")
     public void a_resource_id_with_hours_on_assigned_to_task(Integer file, Integer quantHours, Integer date, Integer idTask) {
-        hours = createHours(file, quantHours, idTask, date);
+        hours = createHours(file, quantHours, 15, idTask, date);
     }
 
     @When("i modify the task to {int}")
@@ -87,7 +99,7 @@ public class HoursStepDefinitions extends HoursIntegrationServiceTest {
 
     @Given("a resource id {int} with {int} hours loaded on {int} from a task {int}")
     public void a_resource_id_with_hours_loaded_from_a_task(Integer file, Integer quantHours, Integer date, Integer idTask) {
-        hours = createHours(file, quantHours, idTask, date);
+        hours = createHours(file, quantHours, 15, idTask, date);
         hours = saveHours(hours);
     }
 
@@ -116,8 +128,8 @@ public class HoursStepDefinitions extends HoursIntegrationServiceTest {
 
     @Given("a resource with id {int} with two hours loaded to different tasks and dates")
     public void a_resource_with_id_with_two_hours_loaded_to_different_tasks_and_dates(Integer file) {
-        hours1 = createHours(file, 4, 10, 20210214);
-        hours2 = createHours(file, 4, 20, 20210215);
+        hours1 = createHours(file, 4, 15,10, 20210214);
+        hours2 = createHours(file, 4, 15,20, 20210215);
 
         saveHours(hours1);
         saveHours(hours2);

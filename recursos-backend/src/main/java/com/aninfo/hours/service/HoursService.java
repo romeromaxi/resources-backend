@@ -84,4 +84,24 @@ public class HoursService {
 
         return hours;
     }
+
+    @Transactional
+    public Hours changeMinutes(Long id, Integer newQuantMinutes) {
+        Hours hours = hoursRepository.findHoursById(id);
+
+        if (newQuantMinutes>59 || newQuantMinutes<0){
+            throw new InvalidHoursException("Minutes loaded must be between 0 and 59");
+        }
+
+        if ((hours.getQuantityMinutes() + newQuantMinutes) > 59){
+            hours.setQuantityHours((hours.getQuantityHours() + 1));
+            hours.setQuantityMinutes(hours.getQuantityMinutes() + newQuantMinutes - 60);
+        } else {
+            hours.setQuantityMinutes(hours.getQuantityMinutes() + newQuantMinutes);
+        }
+
+        hoursRepository.save(hours);
+
+        return hours;
+    }
 }
