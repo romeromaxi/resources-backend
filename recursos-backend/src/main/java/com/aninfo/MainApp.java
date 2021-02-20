@@ -50,12 +50,11 @@ public class MainApp extends SpringBootServletInitializer {
         } catch (ResourceNotFoundException rnfe){
             return ResponseEntity.notFound().build();
         }
-
     }
 
     @PostMapping("/hours")
     @ResponseStatus(HttpStatus.CREATED)
-    public Hours createAccount(@RequestBody Hours hours) {
+    public Hours createHours(@RequestBody Hours hours) {
         return hoursService.saveHours(hours);
     }
 

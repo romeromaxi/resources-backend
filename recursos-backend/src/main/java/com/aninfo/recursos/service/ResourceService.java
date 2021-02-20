@@ -6,7 +6,6 @@ import com.aninfo.recursos.repository.ResourceRepository;
 import org.springframework.http.ResponseEntity;
 
 import java.util.Vector;
-import java.util.Optional;
 
 public class ResourceService {
 

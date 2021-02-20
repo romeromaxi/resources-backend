@@ -13,6 +13,7 @@ import javax.transaction.Transactional;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -22,11 +23,13 @@ public class HoursService {
     private HoursRepository hoursRepository;
 
     public Hours saveHours(Hours hours) {
-        if(hours.getQuantityHours() > 24 || hours.getQuantityHours() <= 0)
-            throw new InvalidHoursException("Hours loaded must be between 1 and 24");
+        checkValidHoursAndMinutes(hours);
+        checkLoadedHoursOnDate(hours);
+
         LocalDate today = LocalDate.now();
         int todayInt = today.getYear() * 10000 + today.getMonthValue() * 100 + today.getDayOfMonth();
         hours.setLoadingDate(todayInt);
+
         return hoursRepository.save(hours);
     }
 
@@ -108,5 +111,58 @@ public class HoursService {
         hoursRepository.save(hours);
 
         return hours;
+    }
+
+    private void checkValidHoursAndMinutes(Hours hours) {
+        if(hours.getQuantityHours() > 24 || hours.getQuantityHours() < 0)
+            throw new InvalidHoursException("Hours loaded must be between 0 and 24");
+
+        if(hours.getQuantityMinutes() >= 60 || hours.getQuantityMinutes() < 0){
+            throw new InvalidHoursException("Minutes loaded must be between 0 and 59");
+        }
+
+        if(hours.getQuantityHours() == 0 && hours.getQuantityMinutes() == 0){
+            throw new InvalidHoursException("Hours and minutes cannot be both zero");
+        }
+
+        if(hours.getQuantityHours() == 24 && hours.getQuantityMinutes() > 0){
+            throw new InvalidHoursException("Cannot load minutes if hours are 24");
+        }
+    }
+
+    private void checkLoadedHoursOnDate(Hours hours) {
+        List<Hours> hoursList = hoursRepository.findByFileAndDate(hours.getFile(), hours.getDate());
+        int totalHours = 0, totalMinutes = 0;
+        boolean addingHours = true;
+
+        for(Hours hour : hoursList){
+            if(hour.getId() == hours.getId()){
+                addingHours = false;
+                totalHours += hours.getQuantityHours();
+                totalMinutes += hours.getQuantityMinutes();
+            } else {
+                totalHours += hour.getQuantityHours();
+                totalMinutes += hour.getQuantityMinutes();
+            }
+
+            if (totalMinutes >= 60) {
+                totalMinutes -= 60;
+                totalHours++;
+            }
+        }
+
+        if(addingHours){
+            totalHours += hours.getQuantityHours();
+            totalMinutes += hours.getQuantityMinutes();
+
+            if (totalMinutes >= 60) {
+                totalMinutes -= 60;
+                totalHours++;
+            }
+        }
+
+
+        if(totalHours > 24 || (totalHours == 24 && totalMinutes > 0))
+            throw new InvalidHoursException("Cannot load more than 24 hours and 0 minutes on a given date");
     }
 }

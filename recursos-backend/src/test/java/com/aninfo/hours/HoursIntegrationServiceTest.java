@@ -34,7 +34,6 @@ public class HoursIntegrationServiceTest {
 
     public Hours changeMinutes(Long id, Integer newQuantMinutes) { return hoursService.changeMinutes(id, newQuantMinutes);}
 
-
     public void deleteById(Long id){
         hoursService.deleteById(id);
     }

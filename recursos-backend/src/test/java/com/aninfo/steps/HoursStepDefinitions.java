@@ -159,4 +159,25 @@ public class HoursStepDefinitions extends HoursIntegrationServiceTest {
         assertEquals(it.next().getFile(), file);
         assertEquals(it.next().getFile(), file);
     }
+
+    @Given("loading {int} hours and {int} minutes to the resource with id {int} in the task {int}")
+    public void loading_hours_and_minutes_to_the_resource_with_id_in_the_task(Integer quantHours, Integer quanMinutes, Integer file, Integer idTask) {
+        hours = createHours(file, quantHours, quanMinutes, idTask, 20200215);
+    }
+
+    @Given("a resource id {int} with {int} hours and {int} minutes loaded on {int} from a task {int}")
+    public void a_resource_id_with_hours_and_minutes_loaded_on_from_a_task(Integer file, Integer quantHours, Integer quanMinutes, Integer date, Integer idTask) {
+        hours = createHours(file, quantHours, quanMinutes, idTask, date);
+        hours = saveHours(hours);
+    }
+
+    @When("trying to load {int} hours and {int} minutes on {int} to the resource with id {int}")
+    public void trying_to_load_hours_and_minutes_on(Integer quantHours, Integer quanMinutes, Integer date, Integer file) {
+        hours = createHours(file, quantHours, quanMinutes, 2, date);
+        try {
+            hours = saveHours(hours);
+        } catch (InvalidHoursException ihe) {
+            this.ihe = ihe;
+        }
+    }
 }

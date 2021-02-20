@@ -20,11 +20,6 @@ Feature: create update delete or hours to a project
     When add 30 minutes
     Then the resource id 14 has 15 minutes assigned in the task 190
 
-  Scenario: create zero hours to a resource
-    Given loading 0 hours to the resource with id 19 in the task 150
-    When trying to save the hours
-    Then i get invalid number error
-
   Scenario: create more than 24 hours to a resource
     Given loading 25 hours to the resource with id 19 in the task 150
     When trying to save the hours
@@ -60,6 +55,32 @@ Feature: create update delete or hours to a project
     When recovering the hours from the resource with id 1
     Then i get a list of 2 elements
     And they are both associated to the resource with id 1
+
+  Scenario: trying to load 0 hours and 0 minutes
+    Given loading 0 hours and 0 minutes to the resource with id 19 in the task 150
+    When trying to save the hours
+    Then i get invalid number error
+
+  Scenario: trying to load 24 hours and more than 0 minutes
+    Given loading 24 hours and 1 minutes to the resource with id 19 in the task 150
+    When trying to save the hours
+    Then i get invalid number error
+
+  Scenario: trying to load negative minutes
+    Given loading 2 hours and -5 minutes to the resource with id 19 in the task 150
+    When trying to save the hours
+    Then i get invalid number error
+
+  Scenario: trying to load more than 59 minutes
+    Given loading 2 hours and 60 minutes to the resource with id 19 in the task 150
+    When trying to save the hours
+    Then i get invalid number error
+
+  Scenario: trying to load more than 24 hours and 0 minutes on the same date
+    Given a resource id 4 with 10 hours loaded on 20210115 from a task 244
+    And a resource id 4 with 5 hours and 30 minutes loaded on 20210115 from a task 244
+    When trying to load 8 hours and 31 minutes on 20210115 to the resource with id 4
+    Then i get invalid number error
 
   #Scenario: confirm the delete of hours
   #  Given a resource id 154 with 10 hours worked from a task 154

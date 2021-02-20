@@ -40,7 +40,6 @@ public class Hours {
         return this.quantityMinutes;
     }
 
-
     public Integer getFile(){
         return this.file;
     }
