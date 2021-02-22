@@ -36,7 +36,7 @@ public class MainApp extends SpringBootServletInitializer {
                 .singletonMap("server.port", "8080"));
         app.run(args);
     }
-    
+
     @CrossOrigin
     @GetMapping("/resources")
     public Vector<Resource> readAllFromExternalSystem() {
@@ -53,6 +53,7 @@ public class MainApp extends SpringBootServletInitializer {
         }
     }
 
+    @CrossOrigin(methods = RequestMethod.POST)
     @PostMapping("/hours")
     @ResponseStatus(HttpStatus.CREATED)
     public Hours createHours(@RequestBody Hours hours) {
