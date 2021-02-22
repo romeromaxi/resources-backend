@@ -24,7 +24,7 @@ import java.util.Optional;
 
 @RestController
 @SpringBootApplication
-@CrossOrigin(origins = "*", methods= {RequestMethod.GET,RequestMethod.POST,RequestMethod.PUT, RequestMethod.DELETE})
+@CrossOrigin(origins = "https://squad6-backend.herokuapp.com/", methods= {RequestMethod.GET,RequestMethod.POST,RequestMethod.PUT, RequestMethod.DELETE})
 public class MainApp extends SpringBootServletInitializer {
     private ResourceService resourceService = new ResourceService();
 
