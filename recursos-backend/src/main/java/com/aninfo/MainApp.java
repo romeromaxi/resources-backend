@@ -24,7 +24,7 @@ import java.util.Optional;
 
 @RestController
 @SpringBootApplication
-@CrossOrigin(maxAge = 3600)
+@CrossOrigin(origins = "*", methods= {RequestMethod.GET,RequestMethod.POST,RequestMethod.PUT, RequestMethod.DELETE})
 public class MainApp extends SpringBootServletInitializer {
     private ResourceService resourceService = new ResourceService();
 
