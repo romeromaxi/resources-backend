@@ -24,6 +24,7 @@ import java.util.Optional;
 
 @RestController
 @SpringBootApplication
+@CrossOrigin(maxAge = 3600)
 public class MainApp extends SpringBootServletInitializer {
     private ResourceService resourceService = new ResourceService();
 
@@ -37,7 +38,6 @@ public class MainApp extends SpringBootServletInitializer {
         app.run(args);
     }
 
-    @CrossOrigin
     @GetMapping("/resources")
     public Vector<Resource> readAllFromExternalSystem() {
         return resourceService.readAllFromExternalSystem();
@@ -53,7 +53,6 @@ public class MainApp extends SpringBootServletInitializer {
         }
     }
 
-    @CrossOrigin(methods = RequestMethod.POST)
     @PostMapping("/hours")
     @ResponseStatus(HttpStatus.CREATED)
     public Hours createHours(@RequestBody Hours hours) {
