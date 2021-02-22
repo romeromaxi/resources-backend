@@ -24,6 +24,7 @@ import java.util.Optional;
 
 @RestController
 @SpringBootApplication
+@CrossOrigin(maxAge = 3600)
 public class MainApp extends SpringBootServletInitializer {
     private ResourceService resourceService = new ResourceService();
 
