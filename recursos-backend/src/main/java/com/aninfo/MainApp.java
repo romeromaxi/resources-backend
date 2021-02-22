@@ -24,7 +24,6 @@ import java.util.Optional;
 
 @RestController
 @SpringBootApplication
-@CrossOrigin(origins = "*", maxAge = 3600)
 public class MainApp extends SpringBootServletInitializer {
     private ResourceService resourceService = new ResourceService();
 
@@ -37,7 +36,8 @@ public class MainApp extends SpringBootServletInitializer {
                 .singletonMap("server.port", "8080"));
         app.run(args);
     }
-
+    
+    @CrossOrigin
     @GetMapping("/resources")
     public Vector<Resource> readAllFromExternalSystem() {
         return resourceService.readAllFromExternalSystem();
