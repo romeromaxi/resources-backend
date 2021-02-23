@@ -2,7 +2,6 @@ package com.aninfo.hours.service;
 
 import com.aninfo.hours.exceptions.InvalidHoursException;
 import com.aninfo.hours.exceptions.InvalidMinutesException;
-import com.aninfo.hours.exceptions.NoLoadedHoursException;
 import com.aninfo.hours.model.Hours;
 import com.aninfo.hours.repository.HoursRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -50,8 +49,6 @@ public class HoursService {
     public Collection<Hours> findByFile(Integer file) {
 
         Collection<Hours> hoursList = hoursRepository.findByFile(file);
-        if(hoursList.isEmpty())
-            throw new NoLoadedHoursException("There are no hours loaded for that resource");
 
         return hoursList;
     }

@@ -1,6 +1,5 @@
 package com.aninfo;
 
-import com.aninfo.hours.exceptions.NoLoadedHoursException;
 import com.aninfo.recursos.exceptions.ResourceNotFoundException;
 import com.aninfo.recursos.model.Resource;
 import com.aninfo.recursos.service.ResourceService;
@@ -11,7 +10,6 @@ import com.aninfo.hours.service.HoursService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -72,12 +70,8 @@ public class MainApp extends SpringBootServletInitializer {
 
     @GetMapping("/hoursFile/{file}")
     public ResponseEntity<Collection<Hours>> getHoursByFile(@PathVariable Integer file){
-        try{
-            Collection<Hours> hoursList = hoursService.findByFile(file);
-            return ResponseEntity.ok(hoursList);
-        } catch (NoLoadedHoursException nlhe){
-            return ResponseEntity.notFound().build();
-        }
+        Collection<Hours> hoursList = hoursService.findByFile(file);
+        return ResponseEntity.ok(hoursList);
     }
 
     @DeleteMapping("/hours/{id}")

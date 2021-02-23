@@ -75,4 +75,12 @@ public class Hours {
     public void setTask(Integer newIdTask) {
         this.idTask = newIdTask;
     }
+
+    public void setIdProject(Integer newIdProject){
+        this.idProject = newIdProject;
+    }
+
+    public Integer getIdProject(){
+        return this.idProject;
+    }
 }
