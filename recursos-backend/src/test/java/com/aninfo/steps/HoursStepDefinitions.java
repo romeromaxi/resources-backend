@@ -25,9 +25,9 @@ public class HoursStepDefinitions extends HoursIntegrationServiceTest {
     private Collection<Hours> hoursList;
     private InvalidHoursException ihe;
 
-    @Given("a resource id {int} who works {int} hours in the task {int}")
-    public void a_resource_id_who_works_hours_in_the_task(Integer file, Integer quantHours, Integer idTask) {
-        hours = createHours(file,quantHours, 15,idTask,20201005);
+    @Given("a resource id {int} who works {int} hours in the project {int} and task {int}")
+    public void a_resource_id_who_works_hours_in_the_project_and_task(Integer file, Integer quantHours, Integer idProject, Integer idTask) {
+        hours = createHours(file,quantHours, 15, idProject, idTask,20201005);
     }
 
     @When("save the hours")
@@ -40,9 +40,9 @@ public class HoursStepDefinitions extends HoursIntegrationServiceTest {
         assertEquals(quantHours, hours.getQuantityHours());
     }
 
-    @Given("a resource id {int} who works {int} hours and {int} minutes in the task {int}")
-    public void a_resource_id_who_works_hours_and_minutes_in_the_task(Integer file, Integer quantHours, Integer quanMinutes, Integer idTask) {
-        hours = createHours(file, quantHours, quanMinutes, idTask, 20200215);
+    @Given("a resource id {int} who works {int} hours and {int} minutes in the project {int} and task {int}")
+    public void a_resource_id_who_works_hours_and_minutes_in_the_project_and_task(Integer file, Integer quantHours, Integer quanMinutes, Integer idProject, Integer idTask) {
+        hours = createHours(file, quantHours, quanMinutes, idProject, idTask, 20200215);
         hours = saveHours(hours);
     }
 
@@ -56,9 +56,11 @@ public class HoursStepDefinitions extends HoursIntegrationServiceTest {
         assertEquals(quanMinutes, hours.getQuantityMinutes());
     }
 
-    @Given("loading {int} hours to the resource with id {int} in the task {int}")
-    public void loading_hours_to_the_resource_with_id_in_the_task(Integer quantHours, Integer file, Integer idTask) {
-        hours = createHours(file, quantHours, 15, idTask, 20210214);
+    @Given("loading {int} hours to the resource with id {int} in the project {int} and task {int}")
+    public void loading_hours_to_the_resource_with_id_in_the_project_and_task(
+            Integer quantHours, Integer file, Integer idProject, Integer idTask
+    ) {
+        hours = createHours(file, quantHours, 15, idProject, idTask, 20210214);
     }
 
     @When("trying to save the hours")
@@ -82,14 +84,18 @@ public class HoursStepDefinitions extends HoursIntegrationServiceTest {
     }
 
     @Then("the date of the {int} hours assigned to resource id {int} to task {int} is {int}")
-    public void the_date_of_the_hours_assigned_to_resource_ir_to_task_is(Integer quantHours, Integer file, Integer idTask, Integer date) {
+    public void the_date_of_the_hours_assigned_to_resource_ir_to_task_is(
+            Integer quantHours, Integer file, Integer idTask, Integer date
+    ) {
         assertEquals(date, hours.getDate());
     }
 
 
-    @Given("a resource id {int} with {int} hours on {int} assigned to task {int}")
-    public void a_resource_id_with_hours_on_assigned_to_task(Integer file, Integer quantHours, Integer date, Integer idTask) {
-        hours = createHours(file, quantHours, 15, idTask, date);
+    @Given("a resource id {int} with {int} hours on {int} assigned to project {int} and task {int}")
+    public void a_resource_id_with_hours_on_assigned_to_project_and_task(
+            Integer file, Integer quantHours, Integer date, Integer idProject, Integer idTask
+    ) {
+        hours = createHours(file, quantHours, 15, idProject, idTask, date);
     }
 
     @When("i modify the task to {int}")
@@ -102,9 +108,11 @@ public class HoursStepDefinitions extends HoursIntegrationServiceTest {
         assertEquals(idTask, hours.getIdTask());
     }
 
-    @Given("a resource id {int} with {int} hours loaded on {int} from a task {int}")
-    public void a_resource_id_with_hours_loaded_from_a_task(Integer file, Integer quantHours, Integer date, Integer idTask) {
-        hours = createHours(file, quantHours, 15, idTask, date);
+    @Given("a resource id {int} with {int} hours loaded on {int} from a project {int} and task {int}")
+    public void a_resource_id_with_hours_loaded_from_a_project_and_task(
+            Integer file, Integer quantHours, Integer date, Integer idProject, Integer idTask
+    ) {
+        hours = createHours(file, quantHours, 15, idProject, idTask, date);
         hours = saveHours(hours);
     }
 
@@ -133,8 +141,8 @@ public class HoursStepDefinitions extends HoursIntegrationServiceTest {
 
     @Given("a resource with id {int} with two hours loaded to different tasks and dates")
     public void a_resource_with_id_with_two_hours_loaded_to_different_tasks_and_dates(Integer file) {
-        hours1 = createHours(file, 4, 15,10, 20210214);
-        hours2 = createHours(file, 4, 15,20, 20210215);
+        hours1 = createHours(file, 4, 15, 1,10, 20210214);
+        hours2 = createHours(file, 4, 15, 1,20, 20210215);
 
         saveHours(hours1);
         saveHours(hours2);
@@ -160,20 +168,24 @@ public class HoursStepDefinitions extends HoursIntegrationServiceTest {
         assertEquals(it.next().getFile(), file);
     }
 
-    @Given("loading {int} hours and {int} minutes to the resource with id {int} in the task {int}")
-    public void loading_hours_and_minutes_to_the_resource_with_id_in_the_task(Integer quantHours, Integer quanMinutes, Integer file, Integer idTask) {
-        hours = createHours(file, quantHours, quanMinutes, idTask, 20200215);
+    @Given("loading {int} hours and {int} minutes to the resource with id {int} in the project {int} and task {int}")
+    public void loading_hours_and_minutes_to_the_resource_with_id_in_the_project_and_task(
+            Integer quantHours, Integer quanMinutes, Integer file, Integer idProject, Integer idTask
+    ) {
+        hours = createHours(file, quantHours, quanMinutes, idProject, idTask, 20200215);
     }
 
-    @Given("a resource id {int} with {int} hours and {int} minutes loaded on {int} from a task {int}")
-    public void a_resource_id_with_hours_and_minutes_loaded_on_from_a_task(Integer file, Integer quantHours, Integer quanMinutes, Integer date, Integer idTask) {
-        hours = createHours(file, quantHours, quanMinutes, idTask, date);
+    @Given("a resource id {int} with {int} hours and {int} minutes loaded on {int} from a project {int} and task {int}")
+    public void a_resource_id_with_hours_and_minutes_loaded_on_from_a_project_and_task(
+            Integer file, Integer quantHours, Integer quanMinutes, Integer date, Integer idProject, Integer idTask
+    ) {
+        hours = createHours(file, quantHours, quanMinutes, idProject, idTask, date);
         hours = saveHours(hours);
     }
 
     @When("trying to load {int} hours and {int} minutes on {int} to the resource with id {int}")
     public void trying_to_load_hours_and_minutes_on(Integer quantHours, Integer quanMinutes, Integer date, Integer file) {
-        hours = createHours(file, quantHours, quanMinutes, 2, date);
+        hours = createHours(file, quantHours, quanMinutes, 2, 2, date);
         try {
             hours = saveHours(hours);
         } catch (InvalidHoursException ihe) {

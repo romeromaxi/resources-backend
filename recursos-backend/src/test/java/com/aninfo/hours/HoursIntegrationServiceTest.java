@@ -22,8 +22,8 @@ public class HoursIntegrationServiceTest {
     @Autowired
     private HoursService hoursService;
 
-    public Hours createHours(Integer file, Integer quantHours, Integer minutes, Integer idTask, Integer date){
-        return new Hours(file, idTask, quantHours, minutes, date);
+    public Hours createHours(Integer file, Integer quantHours, Integer minutes, Integer idProject, Integer idTask, Integer date){
+        return new Hours(file, idProject, idTask, quantHours, minutes, date);
     }
 
     public Hours saveHours(Hours hours){

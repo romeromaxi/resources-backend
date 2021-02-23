@@ -11,6 +11,7 @@ public class Hours {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private Integer file;
+    private Integer idProject;
     private Integer idTask;
     private Integer quantityHours;
     private Integer quantityMinutes;
@@ -20,8 +21,9 @@ public class Hours {
     public Hours() {
     }
 
-    public Hours(Integer file, Integer idTask, Integer quantityHours, Integer quantityMinutes, Integer date) {
+    public Hours(Integer file, Integer idProject, Integer idTask, Integer quantityHours, Integer quantityMinutes, Integer date) {
         this.file = file;
+        this.idProject = idProject;
         this.idTask = idTask;
         this.quantityHours = quantityHours;
         this.quantityMinutes = quantityMinutes;
